@@ -32,6 +32,9 @@ window.addEventListener('load', () => {
     loadGuide('content')
         .then(() => {
             modifyContent();
+
+            let hashTarget = document.getElementById(location.hash.substring(1));
+            if (hashTarget != null) hashTarget.scrollIntoView();
         })
         .catch(error => {
             console.error(error);
