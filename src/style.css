@@ -1,0 +1,350 @@
+@font-face {
+    font-family: "Mojangles";
+    src: url("../assets/fonts/Minecraft-Seven_v2.woff2");
+}
+
+@font-face {
+    font-family: "NotoSans";
+    src: url("../assets/fonts/noto-sans/NotoSans.ttf");
+}
+
+:root {
+    --color-white: #FFFFFF;
+    --color-gray: #AAAAAA;
+    --color-dark-gray: #555555;
+    --color-black: #000000;
+    --color-dark-blue: #0000AA;
+    --color-blue: #5555FF;
+    --color-dark-green: #00AA00;
+    --color-green: #55FF55;
+    --color-dark-aqua: #00AAAA;
+    --color-aqua: #55FFFF;
+    --color-dark-red: #AA0000;
+    --color-red: #FF5555;
+    --color-dark-purple: #AA00AA;
+    --color-light-purple: #FF55FF;
+    --color-yellow: #FFFF55;
+    --color-gold: #FFAA00;
+}
+
+:root, html, body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0 15px;
+    background: url('../assets/images/background.webp');
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    font-family: "Mojangles";
+    font-size: 20px;
+    font-smooth: never;
+    -webkit-font-smoothing: none;
+    line-height: 1.25;
+    color: white;
+}
+
+body * {
+    text-shadow: 0.1em 0.1em 0em hsl(from currentColor h s calc(l * 0.25));
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+    margin: 0.5em 0;
+}
+
+h1 {
+    font-size: 3em;
+    text-align: center;
+    image-rendering: pixelated;
+}
+
+h2 {
+    font-size: 2em;
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+    padding-bottom: 0.085em;
+    border-bottom: 0.1em solid var(--color-gray);
+}
+
+h3 {
+    font-size: 1.5em;
+    margin-top: 1em;
+}
+
+h4, h5, h6 {
+    font-size: 1em;
+}
+
+p {
+    margin: 0.5em 0;
+}
+
+a {
+    color: inherit;
+    text-decoration: underline 0.1em solid currentColor;
+}
+
+em {
+    color: var(--color-gray);
+}
+
+ul > li::marker {
+    content: "- ";
+}
+
+ol > li {
+    list-style: decimal;
+}
+
+table {
+    border-spacing: 0;
+}
+
+table :is(th, td) {
+    padding-right: 1em;
+    padding-bottom: 0.1em;
+}
+
+table :is(th, td):last-of-type {
+    padding-right: 0;
+}
+
+table tr:last-of-type :is(th, td) {
+    padding-bottom: 0;
+}
+
+thead {
+    display: none;
+}
+
+thead:has(th:not(:empty)) {
+    display: initial;
+}
+
+th:empty {
+    display: none;
+}
+
+.flex {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.4em 1em;
+}
+
+.flex > * {
+    display: inline-block;
+    width: fit-content;
+}
+
+details {
+    padding-left: 1em;
+}
+
+summary {
+    margin-left: -1em;
+    user-select: none;
+    cursor: pointer;
+    padding: 0.2em 0;
+    list-style-type: none;
+}
+summary::marker {
+    display: none;
+}
+
+summary::before {
+    display: inline-block;
+    content: '>';
+    margin-right: 0.5em;
+    transform-origin: 50% 50%;
+}
+:open > summary::before {
+    rotate: 90deg;
+}
+
+input {
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    background: black;
+    padding: 0.3em 0.3em;
+    outline: none;
+    border: 0.11em solid #a0a0a0;
+}
+
+input::placeholder {
+    color: var(--color-gray);
+}
+
+input.invalid {
+    color: var(--color-red);
+}
+
+#container {
+    position: relative;
+    box-sizing: border-box;
+    min-width: 200px;
+    max-width: 1200px;
+    margin: 3em auto;
+    padding: 45px;
+    padding-top: 45px !important;
+    font-family: inherit;
+    font-size: inherit;
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(0.1vw);
+    overflow: hidden;
+}
+
+#container > :first-child,
+#container > :first-child > :first-child,
+#container > :first-child > :first-child > :first-child {
+    margin-top: 0;
+}
+
+#container > :last-child,
+#container > :last-child > :last-child,
+#container > :last-child > :last-child > :last-child {
+    margin-bottom: 0;
+}
+
+#toggles-container {
+    display: flex;
+    gap: 0.5em;
+    cursor: default;
+    user-select: none;
+    position: absolute;
+    top: 0.7em;
+    right: 1.2em;
+}
+
+#toggles-container span {
+    cursor: pointer;
+}
+
+#toggles-container img {
+    color: var(--color-gray);
+    font-size: 32px;
+    height: 1em;
+    filter: drop-shadow(0.12em 0.12em 0em hsl(from currentColor h s calc(l * 0.25)));
+    transition: filter 0.05s ease, scale 0.1s ease;
+}
+#toggles-container img:hover {
+    scale: 1.2;
+}
+#toggles-container img:active {
+    filter: drop-shadow(0.12em 0.12em 0em hsl(from currentColor h s calc(l * 0.25)))
+        brightness(0.75);
+}
+
+.disable-stats-progression .stats-progression {
+    display: none;
+}
+
+.alternative-font {
+    font-family: 'NotoSans';
+    font-smooth: initial;
+    -webkit-font-smoothing: initial;
+}
+
+#content h2:first-of-type {
+    margin-top: 0.5em;
+}
+
+#changelog {
+    color: var(--color-gray);
+}
+
+*[class^="icon"] {
+    display: inline-block;
+    alignment-baseline: middle;
+    baseline-shift: 0.09em;
+    baseline-source: auto;
+    height: 1em;
+    filter: drop-shadow(0.06em 0 0 currentColor)
+        drop-shadow(-0.06em 0 0 currentColor)
+        drop-shadow(0 0.06em 0 currentColor)
+        drop-shadow(0 -0.06em 0 currentColor)
+        drop-shadow(0.06em 0.06em 0em hsl(from currentColor h s calc(l * 0.25)));
+}
+.icon-pixelart {
+    image-rendering: pixelated;
+}
+
+@media (max-width: 767px) {
+    body {
+        font-size: 18px;
+    }
+
+    #container {
+        padding: 15px;
+    }
+}
+
+.color-black {
+    color: var(--color-black);
+}
+
+.color-gray {
+    color: var(--color-gray);
+}
+
+.color-dark-gray {
+    color: var(--color-dark-gray);
+}
+
+.color-white {
+    color: var(--color-white);
+}
+
+.color-dark-blue {
+    color: var(--color-dark-blue);
+}
+
+.color-blue {
+    color: var(--color-blue);
+}
+
+.color-dark-green {
+    color: var(--color-dark-green);
+}
+
+.color-green {
+    color: var(--color-green);
+}
+
+.color-dark-aqua {
+    color: var(--color-dark-aqua);
+}
+
+.color-aqua {
+    color: var(--color-aqua);
+}
+
+.color-dark-red {
+    color: var(--color-dark-red);
+}
+
+.color-red {
+    color: var(--color-red);
+}
+
+.color-dark-purple {
+    color: var(--color-dark-purple);
+}
+
+.color-light-purple {
+    color: var(--color-light-purple);
+}
+
+.color-yellow {
+    color: var(--color-yellow);
+}
+
+.color-gold {
+    color: var(--color-gold);
+}

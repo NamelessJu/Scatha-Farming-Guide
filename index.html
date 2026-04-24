@@ -1,0 +1,92 @@
+<!--
+Copyright (C) 2026  NamelessJu
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You have received a copy of the GNU General Public License
+    along with this program, see the file ./LICENSE.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Scatha Farming Guide</title>
+        <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
+        <meta name="description" content="A guide on how to efficiently farm Scathas on Hypixel SkyBlock">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="src/style.css">
+
+        <script src="src/script.js"></script>
+        <script src="src/calculators/drop-chance-calculator.js"></script>
+        <script src="src/lib/marked/marked.umd.js"></script>
+    </head>
+    <body>
+        <div id="toggles-container">
+            <span id="toggle-progression-info" title="Toggle progression info">
+                <img class="icon-pixelart">
+            </span>
+            <span id="toggle-font" title="Toggle font">
+                <img class="icon-pixelart">
+            </span>
+        </div>
+
+        <div id="container">
+            <h1><span class="color-gold"><img class="icon" src="assets/images/icon.webp" alt="[Icon]"/> Scatha Farming Guide</span></h1>
+
+            <div id="content">
+                <center><em>Loading...</em></center>
+            </div>
+
+            <div>
+                <h2>Calculators</h2>
+
+                <div>
+                    <h3>Scatha Pet Drop Chance</h3>
+                    <div class="flex">
+                        <div>
+                            <div>Magic Find (or EMF):</div>
+                            <input id="calc-dropchance-input-mf" inputmode="numeric" placeholder="0" style="width: 10em">
+                        </div>
+                        <div>
+                            <div>Pet Luck:</div>
+                            <input id="calc-dropchance-input-pl" inputmode="numeric" placeholder="0" style="width: 10em">
+                        </div>
+                        <div>
+                            <div>Scatha kills*:</div>
+                            <input id="calc-dropchance-input-kills" inputmode="numeric" placeholder="1" style="width: 10em">
+                        </div>
+                    </div>
+                    <p>
+                        <span class="color-gray">
+                            *Calculates the chance of dropping at least 1 pet while killing x Scathas,
+                            killing more Scathas does <strong><span class="color-red">not</span></strong> increase the drop chance per kill!
+                        </span>
+                    </p>
+                    <p id="calc-dropchance-result"></p>
+                </div>
+            </div>
+            <br>
+            <br>
+            <center class="color-gray">
+                <p>
+                    <a href="https://github.com/NamelessJu/Scatha-Farming-Guide" target="_blank" rel="noopener noreferrer">Source Code & Contributing</a>
+                    -
+                    <a href="https://modrinth.com/mod/scatha-pro" target="_blank" rel="noopener noreferrer">Scatha-Pro Mod</a>
+                    -
+                    <a href="https://discord.gg/GYrFjRnytV" target="_blank" rel="noopener noreferrer">Scatha Farmers Discord</a>
+                </p>
+                <p>Not affiliated with Hypixel Studios or Mojang Studios</p>
+            </center>
+        </div>
+    </body>
+</html>
