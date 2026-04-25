@@ -95,7 +95,7 @@ function loadGuide() {
 
 function modifyContent() {
     contentElement.querySelectorAll('a[href]').forEach(link => {
-        if (link.href.startsWith('/') || !(/.+:\/\/[^\/]+\.[^\/]+\/?.*/i.test(link.href))) {
+        if (new URL(link.href).origin == new URL(window.location).origin) {
             return;
         }
 
