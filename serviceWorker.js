@@ -2,7 +2,12 @@
 // Bump this to invalidate caches when new versions are released
 const CACHE_NAME = 'scatha-farming-guide-v1';
 
+const BASE_PATH = '/Scatha-Farming-Guide/';
+
 function shouldCache(path) {
+    if (!path.startsWith(BASE_PATH)) return false;
+    path = path.substring(BASE_PATH.length);
+
     if (
         path.endsWith('LICENSE')
         && path == 'README.md'
