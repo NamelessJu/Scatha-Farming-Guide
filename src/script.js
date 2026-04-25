@@ -196,7 +196,7 @@ function handleKonamiCode(keyCode) {
         currentKonamiCodeIndex ++;
 
         // load frames only when about to correctly enter code
-        if (currentKonamiCodeIndex == 7) loadPetDropFrames();
+        if (currentKonamiCodeIndex == 4) loadPetDropFrames();
 
         if (currentKonamiCodeIndex >= konamiCodeKeycodes.length) {
             currentKonamiCodeIndex = 0;
