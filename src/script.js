@@ -33,8 +33,11 @@ window.addEventListener('load', () => {
         .then(() => {
             modifyContent();
 
-            let hashTarget = document.getElementById(location.hash.substring(1));
-            if (hashTarget != null) hashTarget.scrollIntoView();
+            let hash = location.hash.substring(1);
+            if (hash != '') {
+                let hashTarget = document.getElementById(hash);
+                if (hashTarget != null) hashTarget.scrollIntoView();
+            }
         })
         .catch(error => {
             console.error(error);
