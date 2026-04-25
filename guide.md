@@ -3,7 +3,7 @@
   <summary>Changelog</summary>
 
   <details>
-    <summary>2026-??-??</summary>
+    <summary>2026-04-25</summary>
     The initial version!
   </details>
 
