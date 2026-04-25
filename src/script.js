@@ -1,12 +1,27 @@
 
+const konamiCodeKeycodes = [
+    'ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown',
+    'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight',
+    'KeyB', 'KeyA', 'Enter'
+];
+const petDropFrameCount = 180;
+const petDropFps = 60;
+
 let contentElement;
 let progressionInfoImage;
 let fontImage;
+let petDropOverlayImage;
+
+let currentKonamiCodeIndex = 0;
+let petDropFrames = null;
+let petDropAnimationFrameRequest = null;
+
 
 window.addEventListener('load', () => {
     contentElement = document.getElementById('content');
     progressionInfoImage = document.querySelector('#toggle-progression-info img');
     fontImage = document.querySelector('#toggle-font img');
+    petDropOverlayImage = document.getElementById('pet-drop-overlay');
 
     updateStatsProgression();
     updateFont();
@@ -33,15 +48,24 @@ window.addEventListener('load', () => {
         .then(() => {
             modifyContent();
 
-            let hash = location.hash.substring(1);
-            if (hash != '') {
-                let hashTarget = document.getElementById(hash);
-                if (hashTarget != null) hashTarget.scrollIntoView();
+            // scroll to hash on initial page load (not on reloads)
+            if (getNavigationType() === 'navigate') {
+                let hash = location.hash.substring(1);
+                if (hash != '') {
+                    let hashTarget = document.getElementById(hash);
+                    if (hashTarget != null) hashTarget.scrollIntoView();
+                }
             }
         })
         .catch(error => {
             console.error(error);
         });
+    
+    petDropOverlayImage.style.display = 'none';
+});
+
+window.addEventListener('keydown', event => {
+    handleKonamiCode(event.code);
 });
 
 function loadGuide() {
@@ -129,6 +153,88 @@ function generateHeaderIds(element) {
 	}
 }
 
+function getNavigationType() {
+    const entry = performance.getEntriesByType('navigation')[0];
+    if (entry && typeof entry.type === 'string') {
+        return entry.type;
+    }
+    if (performance.navigation) {
+        const legacyType = performance.navigation.type;
+        return legacyType === 1 ? 'reload'
+            : legacyType === 2 ? 'back_forward'
+            : 'navigate';
+    }
+    return undefined;
+}
+
+function loadPetDropFrames() {
+    if (petDropFrames != null) return;
+
+    function loadImage(src) {
+        return new Promise((resolve, reject) => {
+            let image = new Image();
+            image.onload = resolve(image);
+            image.onError = error => reject(error);
+            image.src = src;
+        });
+    }
+
+    let promises = [];
+    for (let i = 0; i < petDropFrameCount; i ++) {
+        promises[i] = loadImage(`assets/images/pet-drop/frame${i.toString(10).padStart(3, '0')}.webp`);
+    }
+    Promise.all(promises)
+        .then(frames => {
+            petDropFrames = frames;
+            console.log('Pet drop frames loaded');
+        })
+        .catch(() => console.error('Failed to load pet drop frames'));
+}
+
+function handleKonamiCode(keyCode) {
+    if (keyCode == konamiCodeKeycodes[currentKonamiCodeIndex]) {
+        currentKonamiCodeIndex ++;
+
+        // load frames only when about to correctly enter code
+        if (currentKonamiCodeIndex == 7) loadPetDropFrames();
+
+        if (currentKonamiCodeIndex >= konamiCodeKeycodes.length) {
+            currentKonamiCodeIndex = 0;
+            showPetDrop();
+        }
+    }
+    else {
+        currentKonamiCodeIndex = keyCode == konamiCodeKeycodes[0] ? 1 : 0;
+    }
+}
+
+function showPetDrop() {
+    if (petDropFrames == null) return;
+
+    if (petDropAnimationFrameRequest != null) {
+        cancelAnimationFrame(petDropAnimationFrameRequest);
+    }
+    
+    let frameIndex = 0;
+    let previousTimestamp = null;
+    function frame() {
+        if (frameIndex >= petDropFrames.length) {
+            petDropAnimationFrameRequest = null;
+            petDropOverlayImage.style.display = 'none';
+            return;
+        }
+        
+        const now = Date.now();
+        const deltaTime = previousTimestamp != null ? (now - previousTimestamp) / 1000 : 0;
+        previousTimestamp = now;
+
+        petDropOverlayImage.src = petDropFrames[Math.floor(frameIndex)].src;
+        frameIndex += deltaTime * petDropFps;
+        petDropAnimationFrameRequest = window.requestAnimationFrame(frame);
+    }
+    petDropAnimationFrameRequest = window.requestAnimationFrame(frame);
+    petDropOverlayImage.style.display = '';
+}
 
 function readNumberInput(input, minimum, maximum, allowDecimals, defaultValue) {
     const trimmedValue = input.value.trim();
