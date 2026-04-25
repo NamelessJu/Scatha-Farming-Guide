@@ -60,8 +60,6 @@ window.addEventListener('load', () => {
         .catch(error => {
             console.error(error);
         });
-    
-    petDropOverlayImage.style.display = 'none';
 });
 
 window.addEventListener('keydown', event => {
@@ -220,7 +218,7 @@ function showPetDrop() {
     function frame() {
         if (frameIndex >= petDropFrames.length) {
             petDropAnimationFrameRequest = null;
-            petDropOverlayImage.style.display = 'none';
+            petDropOverlayImage.setAttribute('hidden', '');
             return;
         }
         
@@ -233,7 +231,7 @@ function showPetDrop() {
         petDropAnimationFrameRequest = window.requestAnimationFrame(frame);
     }
     petDropAnimationFrameRequest = window.requestAnimationFrame(frame);
-    petDropOverlayImage.style.display = '';
+    petDropOverlayImage.removeAttribute('hidden');
 }
 
 function readNumberInput(input, minimum, maximum, allowDecimals, defaultValue) {
