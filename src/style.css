@@ -81,10 +81,11 @@ h3 {
 }
 
 h4 {
-    color: var(--color-gold);
+    font-size: 1.1em;
+    margin-top: 1em;
 }
 
-h4, h5, h6 {
+h5, h6 {
     font-size: 1em;
     margin-top: 1em;
 }
