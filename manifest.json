@@ -5,14 +5,29 @@
     "display": "minimal-ui",
     "icons": [
         {
-            "src": "assets/images/app-icon-512x.png",
+            "src": "assets/images/app-icon-72x.png",
             "type": "image/png",
-            "sizes": "512x512"
+            "sizes": "72x72"
+        },
+        {
+            "src": "assets/images/app-icon-128x.png",
+            "type": "image/png",
+            "sizes": "128x128"
+        },
+        {
+            "src": "assets/images/app-icon-144x.png",
+            "type": "image/png",
+            "sizes": "144x144"
         },
         {
             "src": "assets/images/app-icon-192x.png",
             "type": "image/png",
             "sizes": "192x192"
+        },
+        {
+            "src": "assets/images/app-icon-512x.png",
+            "type": "image/png",
+            "sizes": "512x512"
         },
         {
             "src": "assets/images/favicon.ico",
