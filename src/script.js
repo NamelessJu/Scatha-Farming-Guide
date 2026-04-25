@@ -66,6 +66,25 @@ window.addEventListener('keydown', event => {
     handleKonamiCode(event.code);
 });
 
+window.addEventListener('beforeinstallprompt', event => {
+    event.preventDefault();
+
+    const installButton = document.getElementById('button-install');
+    // override click event because beforeinstallprompt gets re-called on prompt cancellation
+    installButton.onclick = () => {
+        event.prompt().then(result => {
+            if (result.outcome == 'accepted') {
+                installButton.setAttribute('hidden', '');
+            }
+        });
+    };
+    installButton.removeAttribute('hidden');
+});
+
+if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('serviceWorker.js');
+}
+
 function loadGuide() {
     return new Promise((resolve, reject) => {
         const onError = error => {
