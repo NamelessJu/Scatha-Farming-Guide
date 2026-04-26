@@ -48,13 +48,13 @@ window.addEventListener('load', () => {
         .then(() => {
             modifyContent();
 
-            // scroll to hash on initial page load (not on reloads)
-            if (getNavigationType() === 'navigate') {
-                let hash = location.hash.substring(1);
-                if (hash != '') {
-                    let hashTarget = document.getElementById(hash);
-                    if (hashTarget != null) hashTarget.scrollIntoView();
-                }
+            // scroll to hash on initial page load
+            let hash = window.location.hash;
+            let hashTarget = document.getElementById(hash.startsWith('#') ? hash.substring(1) : hash);
+            if (hashTarget != null && contentElement.contains(hashTarget) && getNavigationType() === 'navigate') {
+                let hash = window.location.hash;
+                window.location.hash = '';
+                window.location.hash = hash;
             }
         })
         .catch(error => {

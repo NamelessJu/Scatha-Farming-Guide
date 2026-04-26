@@ -56,6 +56,10 @@ body * {
     text-shadow: 0.1em 0.1em 0em hsl(from currentColor h s calc(l * 0.25));
 }
 
+:target {
+    color: var(--color-green);
+}
+
 h1, h2, h3, h4, h5, h6 {
     font-weight: bold;
     margin: 0.5em 0;
