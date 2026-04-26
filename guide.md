@@ -14,7 +14,7 @@
 **<span class="color-yellow">NOTE:</span>** <span class="color-light-purple">♣ Pet Luck</span> works exactly like <span class="color-aqua">✯ Magic Find</span> for pet drops, it <span class="color-red">**doesn't**</span> increase the rarity of dropped pets!  
 Term we use for both stats added together: "<span class="color-blue">Effective Magic Find</span>" *(short: EMF)*
 
-### <img class="icon-pixelart" src="assets/images/items/chainmail_chestplate.webp"/> Armors:
+### <img class="icon-pixelart" src="assets/guide/icons/chainmail_chestplate.webp"/> Armors:
 
 #### Magic Find armor:
 - [Sorrow Armor](https://hypixelskyblock.minecraft.wiki/w/Sorrow_Armor) *(<span class="color-aqua">+5 ✯</span> per piece = <span class="color-aqua">+20 ✯</span> for whole set)*
@@ -34,7 +34,7 @@ On all Magic Find armor pieces:
 - [Glossy Mineral Armor](https://hypixelskyblock.minecraft.wiki/w/Glossy_Mineral_Armor) *(<span class="color-yellow">+150 ▚ Mining Spread</span> per piece = <span class="color-yellow">+600 ▚ Mining Spread</span> for whole set)*
   *Alternative: [Mineral Armor](https://hypixelskyblock.minecraft.wiki/w/Mineral_Armor) (<span class="color-yellow">+100 ▚ Mining Spread</span> per piece = <span class="color-yellow">+400 ▚ Mining Spread</span> for whole set)*
 
-### <img class="icon-pixelart" src="assets/images/items/prismarine_shard.webp"> Mining Tool:
+### <img class="icon-pixelart" src="assets/guide/icons/prismarine_shard.webp"> Mining Tool:
 
 Any [drill](https://hypixelskyblock.minecraft.wiki/w/Drills)  
   \+ [Perfectly-Cut Fuel Tank](https://hypixelskyblock.minecraft.wiki/w/Perfectly-Cut_Fuel_Tank) *(<span class="color-dark-green">-10% Pickaxe Ability cooldown</span>)*
@@ -42,7 +42,7 @@ Any [drill](https://hypixelskyblock.minecraft.wiki/w/Drills)
 
 Your mining tool/setup should grant you at least 1,500 Mining Speed, as that's the minimum to be able to instantly mine Hard Stone!
 
-### <img class="icon-pixelart" src="assets/images/items/golden_axe.webp" title="RIP Daedalus Axe :("> Weapon:
+### <img class="icon-pixelart" src="assets/guide/icons/golden_axe.webp" title="RIP Daedalus Axe :("> Weapon:
 
 1. [Zombie Commander Whip](https://hypixelskyblock.minecraft.wiki/w/Zombie_Commander_Whip)
   \+ [Bobbin' Time](https://hypixelskyblock.minecraft.wiki/w/Bobbin%27_Time) ultimate enchantment on Magic Find armor  *(<span class="color-aqua">+<span class="stats-progression">0.6-</span>1% ✯</span> per fishing bobber within 30 blocks, up to 5 bobbers; <span class="color-aqua">+<span class="stats-progression">2.4-</span>4% ✯</span> for whole armor set)*  
@@ -60,7 +60,7 @@ Alternatively:
 Any high rarity [fishing rod](https://hypixelskyblock.minecraft.wiki/w/Fishing_Rods)  
   \+ [Lucky](https://hypixelskyblock.minecraft.wiki/w/Reforging#Lucky) reforge *(<span class="color-aqua">+<span class="stats-progression">1-</span>6 ✯</span>)*
 
-### <img class="icon" src="assets/images/items/golden_dragon_pet.webp"> Pets:
+### <img class="icon" src="assets/guide/icons/golden_dragon_pet.webp"> Pets:
 
 #### EMF pet:
 1. [Golden Dragon Pet](https://hypixelskyblock.minecraft.wiki/w/Golden_Dragon_Pet) *(<span class="color-aqua">+<span class="stats-progression">7.25-</span>29.8 ✯</span>)*
@@ -78,7 +78,7 @@ Pet item:
   *Can additionally be used for reducing your heat, as killing mobs with this pet equipped reduces it by 4*
 - Legendary or Mythic [Armadillo](https://hypixelskyblock.minecraft.wiki/w/Armadillo_Pet) *(<span class="color-yellow">+<span class="stats-progression">3-</span>300 ▚ Mining Spread</span>)*
 
-### <img class="icon" src="assets/images/items/rift_necklace.webp"> Equipment:︎︎
+### <img class="icon" src="assets/guide/icons/rift_necklace.webp"> Equipment:︎︎
 
 - Necklace *(one of)*:
   1. [Rift Necklace](https://hypixelskyblock.minecraft.wiki/w/Rift_Necklace) *(<span class="color-aqua">+<span class="stats-progression">1-</span>8 ✯</span>)*
@@ -91,7 +91,7 @@ Pet item:
 On all equipment:  
 \+ [Blazing](https://hypixelskyblock.minecraft.wiki/w/Reforging#Blazing) reforge *(<span class="color-red">+<span class="stats-progression">1-</span>3 ♨ Heat Resistance</span>, <span class="color-dark-green">+0.05% chance of spawning a worm</span> for each <span class="color-red">1 ♨ Heat</span>)*
 
-### <img class="icon" src="assets/images/items/crab_hat.webp"> Accessories:
+### <img class="icon" src="assets/guide/icons/crab_hat.webp"> Accessories:
 
 - [Hatcessory](https://hypixelskyblock.minecraft.wiki/w/Hatcessories) *(<span class="color-aqua">+1 ✯</span>)*
 - [Pulse Ring](https://hypixelskyblock.minecraft.wiki/w/Pulse_Ring) *(<span class="color-aqua">+<span class="stats-progression">0.25-</span>1 ✯</span>)*
@@ -101,7 +101,7 @@ On all equipment:
 On all *(/ as many as possible)* accessories:  
 \+ [Magic Find enrichment](https://hypixelskyblock.minecraft.wiki/w/Enrichments) *(<span class="color-aqua">+0.5 ✯</span> per accessory)*
 
-### <img class="icon" src="assets/images/items/heart_of_the_mountain.webp"> Heart of the Mountain:
+### <img class="icon" src="assets/guide/icons/heart_of_the_mountain.webp"> Heart of the Mountain:
 
 - Efficient Miner *([HOTM Tier 3](https://hypixelskyblock.minecraft.wiki/w/Heart_of_the_Mountain#Tier_3) - <span class="color-yellow">+<span class="stats-progression">3-</span>303 ▚ Mining Spread</span>)*
 - Mole *([HOTM Tier 4](https://hypixelskyblock.minecraft.wiki/w/Heart_of_the_Mountain#Tier_4) - <span class="color-yellow">+<span class="stats-progression">50-</span>401.76 ▚ Mining Spread</span> when mining Hard Stone)*
@@ -113,7 +113,7 @@ On all *(/ as many as possible)* accessories:
   *Do <span class="color-red">**not**</span> use this perk if you can't reach level 16!*
 - Miner's Blessing *([HOTM Tier 8](https://hypixelskyblock.minecraft.wiki/w/Heart_of_the_Mountain#Tier_8) - <span class="color-aqua">+30 ✯</span> on mining islands)*
 
-### <img class="icon" src="assets/images/items/god_potion.webp"> Other Stat Sources:
+### <img class="icon" src="assets/guide/icons/god_potion.webp"> Other Stat Sources:
 
 #### Permanent:
 - Magic Find [Account Upgrade](https://hypixelskyblock.minecraft.wiki/w/Account_%26_Profile_Upgrades) *(<span class="color-aqua">+<span class="stats-progression">1-</span>5 ✯</span>)*
@@ -144,7 +144,7 @@ On all *(/ as many as possible)* accessories:
 - [Extremely Real Shuriken](https://hypixelskyblock.minecraft.wiki/w/Extremely_Real_Shuriken) *(<span class="color-aqua">+5% ✯</span>)*  
   *See info on how to use these [below](#shuriken)*
 
-### <img class="icon" src="assets/images/items/autopet_rules.webp"> [Autopet](https://hypixelskyblock.minecraft.wiki/w/Autopet) Rules:
+### <img class="icon" src="assets/guide/icons/autopet_rules.webp"> [Autopet](https://hypixelskyblock.minecraft.wiki/w/Autopet) Rules:
 
 #### Advanced fishing rod version:
 |                                                           |                                          |
