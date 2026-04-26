@@ -5,33 +5,34 @@
     "display": "minimal-ui",
     "icons": [
         {
-            "src": "assets/images/app-icon-72x.png",
+            "src": "assets/images/app-icons/icon-72x.png",
             "type": "image/png",
-            "sizes": "72x72"
+            "sizes": "72x72",
+            "purpose": "any"
         },
         {
-            "src": "assets/images/app-icon-128x.png",
+            "src": "assets/images/app-icons/icon-128x.png",
             "type": "image/png",
-            "sizes": "128x128"
+            "sizes": "128x128",
+            "purpose": "any"
         },
         {
-            "src": "assets/images/app-icon-144x.png",
+            "src": "assets/images/app-icons/icon-144x.png",
             "type": "image/png",
-            "sizes": "144x144"
+            "sizes": "144x144",
+            "purpose": "any"
         },
         {
-            "src": "assets/images/app-icon-192x.png",
+            "src": "assets/images/app-icons/icon-192x.png",
             "type": "image/png",
-            "sizes": "192x192"
+            "sizes": "192x192",
+            "purpose": "any"
         },
         {
-            "src": "assets/images/app-icon-512x.png",
+            "src": "assets/images/app-icons/icon-512x.png",
             "type": "image/png",
-            "sizes": "512x512"
-        },
-        {
-            "src": "assets/images/favicon.ico",
-            "sizes": "32x32 64x64 128x128 256x256 512x512"
+            "sizes": "512x512",
+            "purpose": "any"
         }
     ]
 }
