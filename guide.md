@@ -130,6 +130,10 @@ On all *(/ as many as possible)* accessories:
 - [Necron's Ladder](https://hypixelskyblock.minecraft.wiki/w/Necron%27s_Ladder) *(<span class="color-aqua">+1 ✯</span>)*
 - Worm [Bestiary](https://hypixelskyblock.minecraft.wiki/w/Bestiary#Crystal_Hollows) level *(<span class="color-aqua">+<span class="stats-progression">3-</span>45 ✯</span>)*
   *(Kill those regular worms too, don't let them think they are safe just because they don't drop a cool pet...)*
+- [Year of the Witch](https://hypixelskyblock.minecraft.wiki/w/Year_of_the_Witch):
+  - [Gemstone Goulash](https://hypixelskyblock.minecraft.wiki/w/Gemstone_Goulash) *(<span class="color-aqua">+1 ✯</span> on ⸕ Subterranean mobs)*
+  - [Effervescent Bouillon](https://hypixelskyblock.minecraft.wiki/w/Effervescent_Bouillon) *(<span class="color-aqua">+1 ✯</span> on ❃ Elusive mobs)*
+  - [Dusty Bisque](https://hypixelskyblock.minecraft.wiki/w/Dusty_Bisque) *(<span class="color-aqua">+1 ✯</span> on ⛨ Shielded mobs)*
 
 #### Temporary:
 - [God Potion](https://hypixelskyblock.minecraft.wiki/w/God_Potion) *(<span class="color-aqua">+88 ✯</span>, <span class="color-light-purple">+20 ♣</span>)*
