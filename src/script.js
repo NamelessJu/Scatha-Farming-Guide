@@ -49,12 +49,17 @@ window.addEventListener('load', () => {
             modifyContent();
 
             // scroll to hash on initial page load
-            let hash = window.location.hash;
-            let hashTarget = document.getElementById(hash.startsWith('#') ? hash.substring(1) : hash);
-            if (hashTarget != null && contentElement.contains(hashTarget) && getNavigationType() === 'navigate') {
+            if (getNavigationType() === 'navigate') {
                 let hash = window.location.hash;
-                window.location.hash = '';
-                window.location.hash = hash;
+                if (hash != '' && hash != '#') {
+                    if (hash.startsWith('#')) hash = hash.substring(1);
+                    const hashTarget = document.getElementById(hash);
+                    if (hashTarget != null && guideContainerElement.contains(hashTarget)) {
+                        let hashTemp = window.location.hash;
+                        window.location.hash = '';
+                        window.location.hash = hashTemp;
+                    }
+                }
             }
         })
         .catch(error => {
