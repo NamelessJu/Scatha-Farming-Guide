@@ -84,8 +84,8 @@ Pet item:
   1. [Rift Necklace](https://hypixelskyblock.minecraft.wiki/w/Rift_Necklace) *(<span class="color-aqua">+<span class="stats-progression">1-</span>8 ✯</span>)*
   1. [Delirium Necklace](https://hypixelskyblock.minecraft.wiki/w/Delirium_Necklace) *(<span class="color-aqua">+<span class="stats-progression">1-</span>1.2 ✯</span>)*
 - Cloak *(one of)*:
-  1. [Annihilation Cloak](https://hypixelskyblock.minecraft.wiki/w/Annihilation_Cloak) *(<span class="color-aqua">+2 ✯</span>)*
   1. [David's Cloak](https://hypixelskyblock.minecraft.wiki/w/David's_Cloak) *(<span class="color-aqua">+2 ✯</span>)*
+  1. [Annihilation Cloak](https://hypixelskyblock.minecraft.wiki/w/Annihilation_Cloak) *(<span class="color-aqua">+2 ✯</span>)*
   1. [Destruction Cloak](https://hypixelskyblock.minecraft.wiki/w/Destruction_Cloak) *(<span class="color-aqua">+1 ✯</span>)*
 - Other slots: any equipment *(mining equipment makes sense)*
 
