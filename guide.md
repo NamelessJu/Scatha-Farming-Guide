@@ -1,10 +1,15 @@
 
 <details id="changelog">
-  <summary>Changelog</summary>
+  <summary>Meta Changes</summary>
+
+  <details>
+    <summary>2026-04-29</summary>
+    Hypixel added the Celestial Mason Jar mixin with the Harvest Feast update, which grants Magic Find and Tracking <em>(see "<a href="#other-stat-sources">Other Stat Sources</a>")</em>!
+  </details>
 
   <details>
     <summary>2026-04-25</summary>
-    The initial version!
+    The initial version of this page!
   </details>
 
 </details>
@@ -139,10 +144,12 @@ On all *(/ as many as possible)* accessories:
 #### Temporary:
 - [God Potion](https://hypixelskyblock.minecraft.wiki/w/God_Potion) *(<span class="color-aqua">+88 ✯</span>, <span class="color-light-purple">+20 ♣</span>)*
   *(Includes: [Magic Find Potion](https://hypixelskyblock.minecraft.wiki/w/Magic_Find_Potion), [Critical Potion](https://hypixelskyblock.minecraft.wiki/w/Critical_Potion) with [Slayer© Energy Drink](https://hypixelskyblock.minecraft.wiki/w/Slayer%C2%A9_Energy_Drink), [Jerry Candy](https://hypixelskyblock.minecraft.wiki/w/Jerry_Candy), [Pet Luck IV Potion](https://hypixelskyblock.minecraft.wiki/w/Pet_Luck_Potion))*
+- Mixins:
+  - [Hot Chocolate Mixin](https://hypixelskyblock.minecraft.wiki/w/Hot_Chocolate_Mixin) *(<span class="color-light-purple">+15 ♣</span>)*
+  - [Celestial Mason Jar](https://hypixelskyblock.minecraft.wiki/w/Celestial_Mason_Jar) *(<span class="color-aqua">+3 ✯</span>, <span class="color-light-purple">+5 ❃ Tracking</span>)*
 - [Booster Cookie](https://hypixelskyblock.minecraft.wiki/w/Booster_Cookie) *(<span class="color-aqua">+15 ✯</span>)*
 - [Beacon](https://hypixelskyblock.minecraft.wiki/w/Beacon) with [Scorched Power Crystal](https://hypixelskyblock.minecraft.wiki/w/Scorched_Power_Crystal) *(<span class="color-light-purple">+<span class="stats-progression">1-</span>6 ❃ Tracking</span>)*
   *The Magic Find buff would be less useful here on average*
-- [Hot Chocolate Mixin](https://hypixelskyblock.minecraft.wiki/w/Hot_Chocolate_Mixin) *(<span class="color-light-purple">+15 ♣</span>)*
 - [Century Cakes](https://hypixelskyblock.minecraft.wiki/w/Century_Cakes):
   - Century Cake of the Next Dungeon Floor *(<span class="color-aqua">+1 ✯</span>)*
   - Streamer's Century Cake *(<span class="color-light-purple">+1 ♣</span>)*
