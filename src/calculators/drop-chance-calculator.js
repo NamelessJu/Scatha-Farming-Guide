@@ -65,7 +65,7 @@ window.addEventListener('DOMContentLoaded', () => {
             resultContainer.removeChild(resultContainer.lastChild);
         }
 
-        let header = document.createElement('h4');
+        let header = document.createElement('h3');
         header.innerText = 'Result:'
         resultContainer.appendChild(header);
 

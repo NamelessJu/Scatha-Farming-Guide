@@ -1,19 +1,4 @@
 
-<details id="changelog">
-  <summary>Meta Changes</summary>
-
-  <details>
-    <summary>2026-04-29</summary>
-    Hypixel added the Celestial Mason Jar mixin with the Harvest Feast update, which grants Magic Find and Tracking <em>(see "<a href="#other-stat-sources">Other Stat Sources</a>")</em>!
-  </details>
-
-  <details>
-    <summary>2026-04-25</summary>
-    The initial version of this page!
-  </details>
-
-</details>
-
 ## Setup
 
 **<span class="color-yellow">NOTE:</span>** <span class="color-light-purple">♣ Pet Luck</span> works exactly like <span class="color-aqua">✯ Magic Find</span> for pet drops, it <span class="color-red">**doesn't**</span> increase the rarity of dropped pets!  

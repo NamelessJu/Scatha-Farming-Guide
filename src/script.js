@@ -7,7 +7,7 @@ const konamiCodeKeycodes = [
 const petDropFrameCount = 180;
 const petDropFps = 60;
 
-let contentElement;
+let guideContainerElement;
 let progressionInfoImage;
 let fontImage;
 let petDropOverlayImage;
@@ -17,8 +17,56 @@ let petDropFrames = null;
 let petDropAnimationFrameRequest = null;
 
 
+
+if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('serviceWorker.js', {
+        updateViaCache: 'none'
+    }).then(registration => {
+        function handleNewServiceWorker() {
+            const newServiceWorker = registration.installing;
+            newServiceWorker.addEventListener('statechange', () => {
+                // ignore first install
+                if (newServiceWorker.state != 'activated' || !navigator.serviceWorker.controller) return;
+
+                document.getElementById('update-notice')?.removeAttribute('hidden');
+            });
+        }
+
+        if (registration.installing) handleNewServiceWorker();
+        registration.addEventListener('updatefound', () => handleNewServiceWorker());
+    });
+}
+
+window.addEventListener('beforeinstallprompt', event => {
+    event.preventDefault();
+
+    const installButton = document.getElementById('button-install');
+    // override click event because beforeinstallprompt gets re-called on prompt cancellation
+    installButton.onclick = () => {
+        event.prompt().then(result => {
+            if (result.outcome == 'accepted') {
+                installButton.setAttribute('hidden', '');
+            }
+        });
+    };
+    installButton.removeAttribute('hidden');
+});
+
+window.addEventListener('DOMContentLoaded', () => {
+    Array.from(document.getElementsByClassName('tabs-container')).forEach(tabsContainer => {
+        openTabHeader(tabsContainer.getElementsByClassName('tab-header')[0]);
+    });
+
+    Array.from(document.getElementsByClassName('tab-header')).forEach(tabHeader => {
+        tabHeader.addEventListener('click', event => openTabHeader(event.currentTarget));
+    });
+
+    window.addEventListener('hashchange', () => openTabsForHash());
+    openTabsForHash();
+});
+
 window.addEventListener('load', () => {
-    contentElement = document.getElementById('content');
+    guideContainerElement = document.getElementById('guide');
     progressionInfoImage = document.querySelector('#toggle-progression-info img');
     fontImage = document.querySelector('#toggle-font img');
     petDropOverlayImage = document.getElementById('pet-drop-overlay');
@@ -50,14 +98,11 @@ window.addEventListener('load', () => {
 
             // scroll to hash on initial page load
             if (getNavigationType() === 'navigate') {
-                let hash = window.location.hash;
-                if (hash != '' && hash != '#') {
-                    if (hash.startsWith('#')) hash = hash.substring(1);
+                const hash = getCleanHash();
+                if (hash != null) {
                     const hashTarget = document.getElementById(hash);
                     if (hashTarget != null && guideContainerElement.contains(hashTarget)) {
-                        let hashTemp = window.location.hash;
-                        window.location.hash = '';
-                        window.location.hash = hashTemp;
+                        scrollToHash();
                     }
                 }
             }
@@ -71,44 +116,60 @@ window.addEventListener('keydown', event => {
     handleKonamiCode(event.code);
 });
 
-window.addEventListener('beforeinstallprompt', event => {
-    event.preventDefault();
 
-    const installButton = document.getElementById('button-install');
-    // override click event because beforeinstallprompt gets re-called on prompt cancellation
-    installButton.onclick = () => {
-        event.prompt().then(result => {
-            if (result.outcome == 'accepted') {
-                installButton.setAttribute('hidden', '');
+
+function openTabHeader(targetTab) {
+    let opened = false;
+
+    Array.from(targetTab.parentElement.getElementsByClassName('tab-header')).forEach(currentTab => {
+        const targetId = currentTab.dataset.tabId;
+        const targetElement = targetId !== undefined ? document.getElementById(targetId) : null;
+
+        if (currentTab == targetTab) {
+            currentTab.classList.add('tab-selected');
+            if (targetElement) {
+                opened = targetElement.hasAttribute('hidden');
+                targetElement.removeAttribute('hidden');
             }
-        });
-    };
-    installButton.removeAttribute('hidden');
-});
+        }
+        else {
+            currentTab.classList.remove('tab-selected');
+            targetElement?.setAttribute('hidden', '');
+        }
+    });
 
-if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('serviceWorker.js', {
-        updateViaCache: 'none'
-    }).then(registration => {
-        function handleNewServiceWorker() {
-            const newServiceWorker = registration.installing;
-            newServiceWorker.addEventListener('statechange', () => {
-                // ignore first install
-                if (newServiceWorker.state != 'activated' || !navigator.serviceWorker.controller) return;
+    return opened;
+}
 
-                document.getElementById('update-notice')?.removeAttribute('hidden');
-            });
+function openTabsForHash() {
+    const hash = getCleanHash();
+    if (hash == null) return;
+
+    const hashTarget = document.getElementById(hash);
+    if (hashTarget == null) return;
+
+    let hashRefreshRequired = false;
+
+    Array.from(document.getElementsByClassName('tab-header')).forEach(tabHeader => {
+        if (tabHeader == hashTarget) {
+            hashRefreshRequired = openTabHeader(tabHeader);
+            return;
         }
 
-        if (registration.installing) handleNewServiceWorker();
-        registration.addEventListener('updatefound', () => handleNewServiceWorker());
+        const tabId = tabHeader.dataset.tabId;
+        const tabElement = tabId !== undefined ? document.getElementById(tabId) : null;
+        if (tabElement != null && tabElement.contains(hashTarget)) {
+            hashRefreshRequired = openTabHeader(tabHeader);
+        }
     });
+
+    if (hashRefreshRequired) scrollToHash();
 }
 
 function loadGuide() {
     return new Promise((resolve, reject) => {
         const onError = error => {
-            contentElement.innerHTML = '<center>Failed to load guide :(</center>'
+            guideContainerElement.innerHTML = '<center>Failed to load guide :(</center>'
             reject(error);
         };
 
@@ -121,7 +182,7 @@ function loadGuide() {
 
                 response.text()
                     .then(markdown => {
-                        contentElement.innerHTML = marked.parse(markdown);
+                        guideContainerElement.innerHTML = marked.parse(markdown);
                         resolve();
                     })
                     .catch(error => onError(error));
@@ -131,7 +192,7 @@ function loadGuide() {
 }
 
 function modifyContent() {
-    contentElement.querySelectorAll('a[href]').forEach(link => {
+    guideContainerElement.querySelectorAll('a[href]').forEach(link => {
         if (new URL(link.href).origin == new URL(window.location).origin) {
             return;
         }
@@ -140,7 +201,7 @@ function modifyContent() {
         link.setAttribute('rel', 'noopener noreferrer');
     });
 
-    generateHeaderIds(contentElement);
+    generateHeaderIds(guideContainerElement);
 }
 
 
@@ -271,6 +332,18 @@ function showPetDrop() {
     }
     petDropAnimationFrameRequest = window.requestAnimationFrame(frame);
     petDropOverlayImage.removeAttribute('hidden');
+}
+
+function getCleanHash() {
+    let hash = window.location.hash;
+    if (!hash || hash == '' || hash == '#') return null;
+    if (hash.startsWith('#')) hash = hash.substring(1);
+    return hash;
+}
+
+function scrollToHash() {
+    openTabsForHash();
+    window.location.replace(window.location.hash);
 }
 
 function readNumberInput(input, minimum, maximum, allowDecimals, defaultValue) {

@@ -53,15 +53,21 @@ Copyright (C) 2026  NamelessJu
             <div id="container">
                 <h1><span class="color-gold"><img class="icon" src="assets/images/scatha-farmer.webp" alt="[Icon]"/> Scatha Farming Guide</span></h1>
 
-                <div id="content">
-                    <center><em>Loading...</em></center>
+                <div class="tabs-container">
+                    <span class="tab-space"></span>
+                    <span class="tab-header" data-tab-id="guide">Guide</span>
+                    <span class="tab-space"></span>
+                    <span class="tab-header" data-tab-id="calculators">Calculators</span>
+                    <span class="tab-space"></span>
+                    <span class="tab-header" data-tab-id="changelogs">Changelogs</span>
+                    <span class="tab-space"></span>
                 </div>
 
-                <div>
-                    <h2>Calculators</h2>
+                <div id="content">
+                    <div id="guide" class="tab"></div>
 
-                    <div>
-                        <h3>Scatha Pet Drop Chance</h3>
+                    <div id="calculators" class="tab">
+                        <h2>Scatha Pet Drop Chance</h2>
                         <div class="flex">
                             <div>
                                 <div>Magic Find (or EMF):</div>
@@ -75,28 +81,72 @@ Copyright (C) 2026  NamelessJu
                                 <div>Scatha kills*:</div>
                                 <input id="calc-dropchance-input-kills" inputmode="numeric" placeholder="1" style="width: 10em">
                             </div>
+                            <p>
+                                <span class="color-gray">
+                                    *Calculates the chance of dropping at least 1 pet while killing x Scathas,
+                                    killing more Scathas does <strong><span class="color-red">not</span></strong> increase the drop chance per kill!
+                                </span>
+                            </p>
+                            <p id="calc-dropchance-result"></p>
                         </div>
-                        <p>
-                            <span class="color-gray">
-                                *Calculates the chance of dropping at least 1 pet while killing x Scathas,
-                                killing more Scathas does <strong><span class="color-red">not</span></strong> increase the drop chance per kill!
-                            </span>
-                        </p>
-                        <p id="calc-dropchance-result"></p>
+                    </div>
+
+                    <div id="changelogs">
+
+                        <div class="tabs-container">
+                            <span class="tab-space"></span>
+                            <span class="tab-header" data-tab-id="meta-changes">Meta Changes</span>
+                            <span class="tab-space"></span>
+                            <span class="tab-header" data-tab-id="page-updates">Page Updates</span>
+                            <span class="tab-space"></span>
+                        </div>
+
+                        <div id="meta-changes">
+                            <details>
+                                <summary>2026-04-29</summary>
+                                <p>
+                                    The Harvest Feast update introduced the Celestial Mason Jar mixin, which grants Magic Find and Tracking<br>
+                                    <em>(See "<a href="#other-stat-sources">Other Stat Sources</a>")</em>
+                                </p>
+                            </details>
+
+                            <details>
+                                <summary>2026-04-25</summary>
+                                <p></p>The initial version!</p>
+                            </details>
+                        </div>
+
+                        <div id="page-updates">
+                            <details>
+                                <summary>2026-04-29</summary>
+                                <ul>
+                                    <li>added an update notice when a new guide or page version gets registered</li>
+                                    <li>added tabs to organize the page a little better!</li>
+                                </ul>
+                            </details>
+
+                            <details>
+                                <summary>2026-04-25</summary>
+                                <p>The initial version!</p>
+                            </details>
+                        </div>
+
                     </div>
                 </div>
-                <br>
-                <br>
-                <center class="color-gray">
-                    <p>
-                        <a href="https://github.com/NamelessJu/Scatha-Farming-Guide" target="_blank" rel="noopener noreferrer">Source Code & Contributing</a>
-                        -
-                        <a href="https://modrinth.com/mod/scatha-pro" target="_blank" rel="noopener noreferrer">Scatha-Pro Mod</a>
-                        -
-                        <a href="https://discord.gg/GYrFjRnytV" target="_blank" rel="noopener noreferrer">Scatha Farmers Discord</a>
-                    </p>
-                    <p>Not affiliated with Hypixel Studios or Mojang Studios</p>
-                </center>
+
+                <footer>
+                    <hr>
+                    <center class="color-gray">
+                        <p>
+                            <a href="https://github.com/NamelessJu/Scatha-Farming-Guide" target="_blank" rel="noopener noreferrer">Source Code & Contributing</a>
+                            -
+                            <a href="https://modrinth.com/mod/scatha-pro" target="_blank" rel="noopener noreferrer">Scatha-Pro Mod</a>
+                            -
+                            <a href="https://discord.gg/GYrFjRnytV" target="_blank" rel="noopener noreferrer">Scatha Farmers Discord</a>
+                        </p>
+                        <p>Not affiliated with Hypixel Studios or Mojang Studios</p>
+                    </center>
+                </footer>
             </div>
         </main>
 

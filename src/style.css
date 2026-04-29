@@ -9,6 +9,8 @@
 }
 
 :root {
+    font-size: 20px;
+
     --color-white: #FFFFFF;
     --color-gray: #AAAAAA;
     --color-dark-gray: #555555;
@@ -25,6 +27,8 @@
     --color-light-purple: #FF55FF;
     --color-yellow: #FFFF55;
     --color-gold: #FFAA00;
+
+    --color-divider: #6f6e70;
 }
 
 :root, html, body {
@@ -44,7 +48,6 @@ body {
     background-position: center;
     background-size: cover;
     font-family: "Mojangles";
-    font-size: 20px;
     font-smooth: never;
     -webkit-font-smoothing: none;
     line-height: 1.25;
@@ -55,8 +58,13 @@ body * {
     text-shadow: 0.1em 0.1em 0em hsl(from currentColor h s calc(l * 0.25));
 }
 
-:target {
-    color: var(--color-green);
+footer {
+    margin-top: 2.5em;
+}
+
+footer hr {
+    margin-top: 0;
+    margin-bottom: 2em;
 }
 
 header {
@@ -76,10 +84,15 @@ h1, h2, h3, h4, h5, h6 {
     margin: 0.5em 0;
 }
 
+:is(h1, h2, h3, h4, h5, h6):target {
+    color: var(--color-green);
+}
+
 h1 {
     font-size: 3em;
     text-align: center;
     image-rendering: pixelated;
+    margin-bottom: 0.75em;
 }
 
 h2 {
@@ -87,7 +100,7 @@ h2 {
     margin-top: 1.5em;
     margin-bottom: 0.5em;
     padding-bottom: 0.085em;
-    border-bottom: 0.1em solid var(--color-gray);
+    border-bottom: 0.15rem solid var(--color-divider);
 }
 
 h3 {
@@ -177,8 +190,15 @@ th:empty {
     width: fit-content;
 }
 
+hr {
+    border: none;
+    border-bottom: 0.15rem solid var(--color-divider);
+    margin: 1em 0;
+}
+
 details {
     padding-left: 1em;
+    margin: 1em 0;
 }
 
 summary {
@@ -225,6 +245,59 @@ input.invalid {
     text-align: center;
     padding: 0.5em;
     z-index: 999;
+}
+
+.tabs-container {
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+    justify-content: center;
+    gap: 0em;
+    height: 3.5rem;
+    margin: 1.5em 0;
+}
+
+.tabs-container > * {
+    box-sizing: border-box;
+}
+
+.tab-space {
+    border-bottom: 0.15rem solid var(--color-divider);
+    width: 0.4rem;
+}
+
+.tab-space:first-child, .tab-space:last-child {
+    flex-grow: 1;
+}
+
+.tab-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0.15rem solid var(--color-divider);
+    height: 2.9rem;
+    width: 10em;
+    user-select: none;
+    cursor: pointer;
+    font-size: 1.5em;
+}
+
+.tab-header.tab-selected {
+    height: 3.5rem;
+    border-color: white;
+    border-bottom: none;
+}
+
+.tab > :first-child,
+.tab > :first-child > :first-child,
+.tab > :first-child > :first-child > :first-child {
+    margin-top: 0;
+}
+
+.tab > :last-child,
+.tab > :last-child > :last-child,
+.tab > :last-child > :last-child > :last-child {
+    margin-bottom: 0;
 }
 
 #container {
@@ -293,12 +366,16 @@ input.invalid {
     -webkit-font-smoothing: initial;
 }
 
-#content h2:first-of-type {
-    margin-top: 0.5em;
+#content > :first-child,
+#content > :first-child > :first-child,
+#content > :first-child > :first-child > :first-child {
+    margin-top: 0;
 }
 
-#changelog {
-    color: var(--color-gray);
+#content > :last-child,
+#content > :last-child > :last-child,
+#content > :last-child > :last-child > :last-child {
+    margin-bottom: 0;
 }
 
 *[class^="icon"] {
@@ -315,6 +392,14 @@ input.invalid {
     image-rendering: pixelated;
 }
 
+#changelogs details {
+    padding-left: 1.5em;
+}
+
+#changelogs summary {
+    font-size: 1.5em;
+}
+
 #pet-drop-overlay {
     position: fixed;
     top: 50%;
@@ -326,7 +411,7 @@ input.invalid {
 }
 
 @media (max-width: 767px) {
-    body {
+    :root {
         font-size: 18px;
     }
 
