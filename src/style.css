@@ -39,7 +39,6 @@ html {
 }
 
 body {
-    padding: 0 15px;
     background: url('../assets/images/background.webp');
     background-attachment: fixed;
     background-position: center;
@@ -58,6 +57,18 @@ body * {
 
 :target {
     color: var(--color-green);
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+main {
+    position: relative;
+    padding: 3em 1em;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -209,12 +220,19 @@ input.invalid {
     color: var(--color-red);
 }
 
+#update-notice {
+    color: var(--color-yellow);
+    text-align: center;
+    padding: 0.5em;
+    z-index: 999;
+}
+
 #container {
     position: relative;
     box-sizing: border-box;
     min-width: 200px;
     max-width: 1200px;
-    margin: 3em auto;
+    margin: 0 auto;
     padding: 45px;
     padding-top: 45px !important;
     font-family: inherit;

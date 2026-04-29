@@ -89,7 +89,20 @@ window.addEventListener('beforeinstallprompt', event => {
 if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register('serviceWorker.js', {
         updateViaCache: 'none'
-    })
+    }).then(registration => {
+        function handleNewServiceWorker() {
+            const newServiceWorker = registration.installing;
+            newServiceWorker.addEventListener('statechange', () => {
+                // ignore first install
+                if (newServiceWorker.state != 'activated' || !navigator.serviceWorker.controller) return;
+
+                document.getElementById('update-notice')?.removeAttribute('hidden');
+            });
+        }
+
+        if (registration.installing) handleNewServiceWorker();
+        registration.addEventListener('updatefound', () => handleNewServiceWorker());
+    });
 }
 
 function loadGuide() {
