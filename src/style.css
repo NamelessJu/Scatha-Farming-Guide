@@ -251,14 +251,15 @@ input.invalid {
     display: flex;
     flex-direction: row;
     align-items: end;
-    justify-content: center;
     gap: 0em;
-    height: 3.5rem;
+    min-height: 3.5rem;
     margin: 1.5em 0;
+    overflow-x: auto;
 }
 
 .tabs-container > * {
     box-sizing: border-box;
+    flex-shrink: 0;
 }
 
 .tab-space {
@@ -417,6 +418,11 @@ input.invalid {
 
     #container {
         padding: 15px;
+    }
+    
+    .tab-header {
+        width: auto;
+        padding: 0 0.75em;
     }
 }
 
