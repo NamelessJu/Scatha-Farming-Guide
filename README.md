@@ -6,4 +6,4 @@ https://namelessju.github.io/Scatha-Farming-Guide/
 
 ## Contributing
 
-If you wish to add or edit something in the guide, create a fork and once you've made your changes create a pull request for the "**dev**" branch!
+If you wish to add or edit something in the guide, create a fork and once you've made your changes create a pull request for the "**staging**" branch!
