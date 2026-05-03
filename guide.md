@@ -64,9 +64,15 @@ Pet item:
 1. [Lucky Clover](https://hypixelskyblock.minecraft.wiki/w/Lucky_Clover) *(<span class="color-aqua">+7 ✯</span>)*
 
 #### Mining pets:
-- Legendary [Bal Pet](https://hypixelskyblock.minecraft.wiki/w/Bal_Pet) *(<span class="color-red">+<span class="stats-progression">1.5-</span>150 ♨ Heat Resistance</span>, <span class="color-dark-green">reduces Pickaxe Ability cooldowns by <span class="stats-progression">0.1-</span>10%</span>)*  
+
+New tunnel *(one of)*:  
+1. Legendary [Bal Pet](https://hypixelskyblock.minecraft.wiki/w/Bal_Pet) *(<span class="color-red">+<span class="stats-progression">1.5-</span>150 ♨ Heat Resistance</span>, <span class="color-dark-green">reduces Pickaxe Ability cooldowns by <span class="stats-progression">0.1-</span>10%</span>)*  
   *Can additionally be used for reducing your heat, as killing mobs with this pet equipped reduces it by 4*
-- Legendary or Mythic [Armadillo](https://hypixelskyblock.minecraft.wiki/w/Armadillo_Pet) *(<span class="color-yellow">+<span class="stats-progression">3-</span>300 ▚ Mining Spread</span>)*
+1. [Crow Pet](https://hypixelskyblock.minecraft.wiki/w/Crow_Pet) *(<span class="color-dark-green">reduces ability cooldowns by <span class="stats-progression">3.07-</span>15%</span>)*
+
+Tunnel ceiling:  
+*(see [strategy](#mining) for what this means)*  
+Legendary or Mythic [Armadillo](https://hypixelskyblock.minecraft.wiki/w/Armadillo_Pet) *(<span class="color-yellow">+<span class="stats-progression">3-</span>300 ▚ Mining Spread</span>)*
 
 ### <img class="icon" src="assets/guide/icons/rift_necklace.webp"> Equipment:︎︎
 
@@ -176,8 +182,7 @@ Using this reforge means that you should mine in the <span class="color-yellow">
 
 ### Mining
 
-Use <span class="color-yellow">Bal Pet for all mining</span> to reduce the Tunnel Vision cooldown *(and for extra Heat Resistance)*!
-Said ability should be used whenever it's available *(apart from during the worm spawn cooldown, of course)*.
+Use the Tunnel Vision ability whenever it's available *(apart from during the worm spawn cooldown, of course)*.
 
 You first mine a 1x2 tunnel with <span class="color-yellow">all Mining Spread sources **disabled**</span>!  
 *(You can use any mining armor for this and don't need to wait during spawn cooldowns)*
