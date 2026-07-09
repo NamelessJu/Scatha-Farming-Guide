@@ -91,7 +91,7 @@ window.addEventListener('load', () => {
         silent: false
     });
 
-    loadGuide('content')
+    loadGuide()
         .then(() => {
             modifyContent();
 
@@ -181,6 +181,7 @@ function loadGuide() {
 
                 response.text()
                     .then(markdown => {
+                        markdown = replaceHypixelIcons(markdown);
                         guideContainerElement.innerHTML = marked.parse(markdown);
                         resolve();
                     })
@@ -188,6 +189,21 @@ function loadGuide() {
             })
             .catch(error => onError(error));
     });
+}
+
+function replaceHypixelIcons(str) {
+    return str
+        .replace(/✯/g, getHypixelIconString('hicon-stat hicon-magic-find', '✯'))
+        .replace(/♣/g, getHypixelIconString('hicon-stat hicon-pet-luck', '♣'))
+        .replace(/▚/g, getHypixelIconString('hicon-stat hicon-mining-spread', '▚'))
+        .replace(/♨/g, getHypixelIconString('hicon-stat hicon-heat-resistance', '♨'))
+        .replace(/⸕/g, getHypixelIconString('hicon-mob hicon-subterranean', '⸕'))
+        .replace(/❃/g, getHypixelIconString('hicon-mob hicon-elusive', '❃'))
+        .replace(/⛨/g, getHypixelIconString('hicon-mob hicon-shielded', '⛨'))
+}
+
+function getHypixelIconString(classList, unicodeSymbol) {
+    return '<span class="hicon-container"><span class="' + classList + '"></span><span class="invisible">' + unicodeSymbol + '</span></span>';
 }
 
 function modifyContent() {

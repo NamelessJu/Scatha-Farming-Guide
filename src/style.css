@@ -12,21 +12,21 @@
     font-size: 20px;
 
     --color-white: #FFFFFF;
-    --color-gray: #AAAAAA;
-    --color-dark-gray: #555555;
+    --color-gray: #A8BFD2;
+    --color-dark-gray: #707592;
     --color-black: #000000;
-    --color-dark-blue: #0000AA;
-    --color-blue: #5555FF;
+    --color-dark-blue: #353FCE;
+    --color-blue: #459BFF;
     --color-dark-green: #00AA00;
     --color-green: #55FF55;
     --color-dark-aqua: #00AAAA;
     --color-aqua: #55FFFF;
-    --color-dark-red: #AA0000;
+    --color-dark-red: #D13228;
     --color-red: #FF5555;
-    --color-dark-purple: #AA00AA;
+    --color-dark-purple: #A335EE;
     --color-light-purple: #FF55FF;
-    --color-yellow: #FFFF55;
-    --color-gold: #FFAA00;
+    --color-yellow: #FFDE2F;
+    --color-gold: #FF9000;
 
     --color-divider: #6f6e70;
 }
@@ -391,6 +391,74 @@ input.invalid {
 }
 .icon-pixelart {
     image-rendering: pixelated;
+}
+
+.hicon-container {
+    --hypixel-icon-scale: 0.7;
+    display: inline-block;
+    filter: drop-shadow(0.1em 0.1em 0em hsl(from currentColor h s calc(l * 0.25)));
+}
+
+.hicon-container > span {
+    display: inline-block;
+    width: calc(1em * var(--hypixel-icon-scale));
+    height: calc(1em * var(--hypixel-icon-scale));
+    background: currentColor;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    image-rendering: pixelated;
+}
+
+.hicon-stat {
+    -webkit-mask-image: url("../assets/images/hypixel/stats.png");
+    mask-image: url("../assets/images/hypixel/stats.png");
+    mask-size: calc(8em * var(--hypixel-icon-scale));
+}
+
+.hicon-mob {
+    -webkit-mask-image: url("../assets/images/hypixel/mobs.png");
+    mask-image: url("../assets/images/hypixel/mobs.png");
+    mask-size: calc(6em * var(--hypixel-icon-scale));
+}
+
+.hicon-magic-find {
+    -webkit-mask-position: calc(-2em * var(--hypixel-icon-scale)) calc(-3em * var(--hypixel-icon-scale));
+    mask-position: calc(-2em * var(--hypixel-icon-scale)) calc(-3em * var(--hypixel-icon-scale));
+}
+
+.hicon-pet-luck {
+    -webkit-mask-position: calc(-3em * var(--hypixel-icon-scale)) calc(-2em * var(--hypixel-icon-scale));
+    mask-position: calc(-3em * var(--hypixel-icon-scale)) calc(-2em * var(--hypixel-icon-scale));
+}
+
+.hicon-mining-spread {
+    -webkit-mask-position: calc(-6em * var(--hypixel-icon-scale)) calc(-2em * var(--hypixel-icon-scale));
+    mask-position: calc(-6em * var(--hypixel-icon-scale)) calc(-2em * var(--hypixel-icon-scale));
+}
+
+.hicon-heat-resistance {
+    -webkit-mask-position: calc(-2em * var(--hypixel-icon-scale)) calc(-2em * var(--hypixel-icon-scale));
+    mask-position: calc(-2em * var(--hypixel-icon-scale)) calc(-2em * var(--hypixel-icon-scale));
+}
+
+.hicon-subterranean {
+    -webkit-mask-position: calc(-1em * var(--hypixel-icon-scale)) calc(-3em * var(--hypixel-icon-scale));
+    mask-position: calc(-1em * var(--hypixel-icon-scale)) calc(-3em * var(--hypixel-icon-scale));
+}
+
+.hicon-elusive {
+    -webkit-mask-position: calc(-1em * var(--hypixel-icon-scale)) calc(-1em * var(--hypixel-icon-scale));
+    mask-position: calc(-1em * var(--hypixel-icon-scale)) calc(-1em * var(--hypixel-icon-scale));
+}
+
+.hicon-shielded {
+    -webkit-mask-position: calc(-4em * var(--hypixel-icon-scale)) calc(-2em * var(--hypixel-icon-scale));
+    mask-position: calc(-4em * var(--hypixel-icon-scale)) calc(-2em * var(--hypixel-icon-scale));
+}
+
+.invisible {
+    font-size: 0;
+    color: rgba(255,255,255,0);
 }
 
 #changelogs details {

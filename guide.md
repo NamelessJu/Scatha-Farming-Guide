@@ -24,7 +24,7 @@ On all Magic Find armor pieces:
 - [Glossy Mineral Armor](https://hypixelskyblock.minecraft.wiki/w/Glossy_Mineral_Armor) *(<span class="color-yellow">+150 ▚ Mining Spread</span> per piece = <span class="color-yellow">+600 ▚ Mining Spread</span> for whole set)*
   *Alternative: [Mineral Armor](https://hypixelskyblock.minecraft.wiki/w/Mineral_Armor) (<span class="color-yellow">+100 ▚ Mining Spread</span> per piece = <span class="color-yellow">+400 ▚ Mining Spread</span> for whole set)*
 
-### <img class="icon-pixelart" src="assets/guide/icons/prismarine_shard.webp"> Mining Tool:
+### <img class="icon-pixelart" src="assets/guide/icons/divans_drill.png"> Mining Tool:
 
 Any [drill](https://hypixelskyblock.minecraft.wiki/w/Drills)  
   \+ [Perfectly-Cut Fuel Tank](https://hypixelskyblock.minecraft.wiki/w/Perfectly-Cut_Fuel_Tank) *(<span class="color-dark-green">-10% Pickaxe Ability cooldown</span>)*
@@ -32,7 +32,7 @@ Any [drill](https://hypixelskyblock.minecraft.wiki/w/Drills)
 
 Your mining tool/setup should grant you at least 1,500 Mining Speed, as that's the minimum to be able to instantly mine Hard Stone!
 
-### <img class="icon-pixelart" src="assets/guide/icons/golden_axe.webp" title="RIP Daedalus Axe :("> Weapon:
+### <img class="icon-pixelart" src="assets/guide/icons/zombie_commander_whip.png" title="RIP Daedalus Axe :("> Weapon:
 
 1. [Zombie Commander Whip](https://hypixelskyblock.minecraft.wiki/w/Zombie_Commander_Whip)
   \+ [Bobbin' Time](https://hypixelskyblock.minecraft.wiki/w/Bobbin%27_Time) ultimate enchantment on Magic Find armor  *(<span class="color-aqua">+<span class="stats-progression">0.6-</span>1% ✯</span> per fishing bobber within 30 blocks, up to 5 bobbers; <span class="color-aqua">+<span class="stats-progression">2.4-</span>4% ✯</span> for whole armor set)*  
