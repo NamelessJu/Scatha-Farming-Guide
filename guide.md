@@ -60,8 +60,10 @@ Any high rarity [fishing rod](https://hypixelskyblock.minecraft.wiki/w/Fishing_R
 Pet item:
 1. [Hephaestus Relic](https://hypixelskyblock.minecraft.wiki/w/Hephaestus_Relic) *(<span class="color-dark-green">increases pet stats by 50%</span>)*
 1. [Minos Relic](https://hypixelskyblock.minecraft.wiki/w/Minos_Relic) *(<span class="color-dark-green">increases pet stats by 33.3%</span>)*
+1. [Poignant Lucky Clover](https://hypixelskyblock.minecraft.wiki/w/Poignant_Lucky_Clover) *(<span class="color-aqua">+13 ✯</span>)*
 1. [Hephaestus Urn](https://hypixelskyblock.minecraft.wiki/w/Hephaestus_Urn) *(<span class="color-light-purple">+10 ♣</span>)*
 1. [Lucky Clover](https://hypixelskyblock.minecraft.wiki/w/Lucky_Clover) *(<span class="color-aqua">+7 ✯</span>)*
+1. [Cretan Urn](https://hypixelskyblock.minecraft.wiki/w/Cretan_Urn) *(<span class="color-light-purple">+5 ♣</span>)*
 
 #### Mining pets:
 
