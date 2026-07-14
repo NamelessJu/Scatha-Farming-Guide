@@ -5,17 +5,21 @@ window.addEventListener('DOMContentLoaded', () => {
     const inputKills = document.getElementById('calc-dropchance-input-kills');
 
     const rarities = {
-        any: { name: 'Any', class: 'color-white' },
-        rare: { name: 'Rare', class: 'color-blue' },
-        epic: { name: 'Epic', class: 'color-dark-purple' },
-        legendary: { name: 'Legendary', class: 'color-gold' }
+        any: { name: 'Any', class: 'color-white', icon: 'scatha_pet_any.webp' },
+        rare: { name: 'Rare', class: 'color-blue', icon: 'scatha_pet_rare.webp' },
+        epic: { name: 'Epic', class: 'color-dark-purple', icon: 'scatha_pet_epic.webp' },
+        legendary: { name: 'Legendary', class: 'color-gold', icon: 'scatha_pet_legendary.webp' }
     };
 
     const addEntry = (table, rarity, chance, extraInfo = '') => {
         let row = document.createElement('tr');
 
         let column1 = document.createElement('td');
-        column1.innerText = rarity.name + ':';
+        let icon = document.createElement('img');
+        icon.classList.add("icon", "no-shadow");
+        icon.src = `src/calculators/drop-chance-calculator/${rarity.icon}`;
+        column1.appendChild(icon);
+        column1.appendChild(document.createTextNode(` ${rarity.name}:`));
         column1.classList.add(rarity.class);
         row.appendChild(column1);
         let column2 = document.createElement('td');
@@ -47,17 +51,17 @@ window.addEventListener('DOMContentLoaded', () => {
         let petLuck = readInput(inputPetLuck);
         let kills = readInput(inputKills, 1, false);
 
-        let anyChance = calculateDropChance(0.004, magicFind, petLuck);
-        let rareChance = calculateDropChance(0.0024, magicFind, petLuck);
-        let epicChance = calculateDropChance(0.0012, magicFind, petLuck);
-        let legendaryChance = calculateDropChance(0.0004, magicFind, petLuck);
+        let anyChance = Math.min(1, calculateDropChance(0.004, magicFind, petLuck));
+        let rareChance = Math.min(6/10, calculateDropChance(0.0024, magicFind, petLuck));
+        let epicChance = Math.min(3/10, calculateDropChance(0.0012, magicFind, petLuck));
+        let legendaryChance = Math.min(1/10, calculateDropChance(0.0004, magicFind, petLuck));
 
         const withKills = kills > 1;
         if (withKills) {
-            anyChance = 1 - Math.pow(1 - anyChance, kills);
-            rareChance = 1 - Math.pow(1 - rareChance, kills);
-            epicChance = 1 - Math.pow(1 - epicChance, kills);
-            legendaryChance = 1 - Math.pow(1 - legendaryChance, kills);
+            anyChance = Math.min(0.9999, 1 - Math.pow(1 - anyChance, kills));
+            rareChance = Math.min(0.9999, 1 - Math.pow(1 - rareChance, kills));
+            epicChance = Math.min(0.9999, 1 - Math.pow(1 - epicChance, kills));
+            legendaryChance = Math.min(0.9999, 1 - Math.pow(1 - legendaryChance, kills));
         }
 
 
@@ -65,9 +69,10 @@ window.addEventListener('DOMContentLoaded', () => {
             resultContainer.removeChild(resultContainer.lastChild);
         }
 
-        let header = document.createElement('h3');
-        header.innerText = 'Result:'
-        resultContainer.appendChild(header);
+        let heading = document.createElement('h3');
+        heading.innerText = 'Result:'
+        heading.style.marginTop = '0';
+        resultContainer.appendChild(heading);
 
         let table = document.createElement('table');
         addEntry(table, rarities.any, anyChance, !withKills ? `(${calculateAverageKills(anyChance)} kills on average)` : '');

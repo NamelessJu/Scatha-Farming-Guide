@@ -461,6 +461,12 @@ input.invalid {
     color: rgba(255,255,255,0);
 }
 
+.no-shadow {
+    text-shadow: none;
+    box-shadow: none;
+    filter: none;
+}
+
 #changelogs details {
     padding-left: 1.5em;
 }
