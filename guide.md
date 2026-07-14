@@ -53,8 +53,8 @@ Any high rarity [fishing rod](https://hypixelskyblock.minecraft.wiki/w/Fishing_R
 ### <img class="icon" src="assets/guide/icons/golden_dragon_pet.webp"> Pets:
 
 #### EMF pet:
-1. [Golden Dragon Pet](https://hypixelskyblock.minecraft.wiki/w/Golden_Dragon_Pet) *(<span class="color-aqua">+<span class="stats-progression">7.25-</span>29.8 ✯</span>)*
-  *Requires 100M gold collection in combination with shuriken and/or Clover Helmet to be better than Black Cat*
+1. [Golden Dragon Pet](https://hypixelskyblock.minecraft.wiki/w/Golden_Dragon_Pet) *(<span class="color-aqua">+<span class="stats-progression">7.25-</span>30 ✯</span>)*
+  *Requires 100M gold collection in combination with Renowned, Shuriken and Clover Helmet to be better than Black Cat!*
 1. [Black Cat Pet](https://hypixelskyblock.minecraft.wiki/w/Black_Cat_Pet) *(<span class="color-aqua">+<span class="stats-progression">0.15-</span>15 ✯</span>, <span class="color-light-purple">+<span class="stats-progression">0.15-</span>15 ♣</span>)*
 
 Pet item:
