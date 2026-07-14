@@ -71,7 +71,7 @@ header {
     position: sticky;
     top: 0;
     z-index: 999;
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.7);
 }
 
 main {
@@ -311,7 +311,7 @@ input.invalid {
     padding-top: 45px !important;
     font-family: inherit;
     font-size: inherit;
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.7);
     backdrop-filter: blur(0.1vw);
     overflow: hidden;
 }
