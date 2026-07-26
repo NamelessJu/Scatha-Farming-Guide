@@ -30,6 +30,7 @@ Copyright (C) 2026  NamelessJu
 
         <script src="src/script.js"></script>
         <script src="src/calculators/drop-chance-calculator/script.js"></script>
+        <script src="src/calculators/shuriken-money-calculator/script.js"></script>
         <script src="src/lib/marked/marked.umd.js"></script>
     </head>
     <body>
@@ -88,6 +89,38 @@ Copyright (C) 2026  NamelessJu
                                 </span>
                             </p>
                             <p id="calc-dropchance-result"></p>
+                        </div>
+
+                        <h2>Shuriken Money</h2>
+                        <div class="flex">
+                            <div style="width: 100%;">
+                                <div>Magic Find <em>(without shuriken bonus; <strong class="color-red">not</strong> EMF):</em></div>
+                                <input id="calc-shurikenmoney-input-mf" inputmode="numeric" placeholder="0" style="width: 35em; max-width: 100%;">
+                            </div>
+                            <div class="flex">
+                                <div>
+                                    <div class="flex">
+                                        <div>
+                                            <div>Pet Price Rare*:</div>
+                                            <input id="calc-shurikenmoney-input-petpricerare" inputmode="numeric" style="width: 11em">
+                                        </div>
+                                        <div>
+                                            <div>Pet Price Epic*:</div>
+                                            <input id="calc-shurikenmoney-input-petpriceepic" inputmode="numeric" style="width: 11em">
+                                        </div>
+                                        <div>
+                                            <div>Pet Price Legendary*:</div>
+                                            <input id="calc-shurikenmoney-input-petpricelegendary" inputmode="numeric" style="width: 11em">
+                                        </div>
+                                    </div>
+                                    <div><em>(* in millions)</em></div>
+                                </div>
+                                <p>
+                                    Extra money earned when applying <a href="https://hypixelskyblock.minecraft.wiki/w/Extremely_Real_Shuriken" target="_blank" rel="noopener noreferrer">Extremely Real Shuriken</a>:<br>
+                                    <span class="color-gold">+ <span id="calc-shurikenmoney-result">95.13</span> k</span> per Scatha kill <em>(on average)</em><br>
+                                    <em>If this amount is larger than the price of 1 shuriken it's worth using them, otherwise not!</em>
+                                </p>
+                            </div>
                         </div>
                     </div>
 

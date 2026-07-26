@@ -178,7 +178,7 @@ th:empty {
     display: none;
 }
 
-.flex {
+.flex, .flex > .flex {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -230,6 +230,7 @@ input {
     padding: 0.3em 0.3em;
     outline: none;
     border: 0.11em solid #a0a0a0;
+    box-sizing: border-box;
 }
 
 input::placeholder {
