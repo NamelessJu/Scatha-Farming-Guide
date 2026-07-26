@@ -16,7 +16,7 @@ On all Magic Find armor pieces:
 - [Renowned](https://hypixelskyblock.minecraft.wiki/w/Reforging#Renowned) reforge *(<span class="color-aqua">+1% ✯</span> per armor piece = <span class="color-aqua">+4% ✯</span> total)*  
 - [Legion](https://hypixelskyblock.minecraft.wiki/w/Legion) ultimate enchantment *(<span class="color-aqua">+<span class="stats-progression">0.07-</span>0.35% ✯</span> per per player within 30 blocks of you, up to 20 players)*  
   *Only really useful when farming in a group.*  
-  *Do not apply this when you plan on using the Zombie Commander Whip! (see [weapon section](#weapon))*
+  *Do not apply this when you plan on using the Zombie Commander Whip! (see [weapon section](#guide/weapon))*
 
 #### Mining armors:
 - [Armor of Divan](https://hypixelskyblock.minecraft.wiki/w/Armor_of_Divan) *(<span class="color-red">+10 ♨ Heat Resistance</span> per piece = <span class="color-red">+40 ♨ Heat Resistance</span> for whole set)*
@@ -73,7 +73,7 @@ New tunnel *(one of)*:
 1. [Crow Pet](https://hypixelskyblock.minecraft.wiki/w/Crow_Pet) *(<span class="color-dark-green">reduces ability cooldowns by <span class="stats-progression">3.07-</span>15%</span>)*
 
 Tunnel ceiling:  
-*(see [strategy](#mining) for what this means)*  
+*(see [strategy](#guide/mining) for what this means)*  
 Legendary or Mythic [Armadillo](https://hypixelskyblock.minecraft.wiki/w/Armadillo_Pet) *(<span class="color-yellow">+<span class="stats-progression">3-</span>300 ▚ Mining Spread</span>)*
 
 ### <img class="icon" src="assets/guide/icons/rift_necklace.webp"> Equipment:︎︎
@@ -147,7 +147,7 @@ On all *(/ as many as possible)* accessories:
   - Century Cake of the Next Dungeon Floor *(<span class="color-aqua">+1 ✯</span>)*
   - Streamer's Century Cake *(<span class="color-light-purple">+1 ♣</span>)*
 - [Extremely Real Shuriken](https://hypixelskyblock.minecraft.wiki/w/Extremely_Real_Shuriken) *(<span class="color-aqua">+5% ✯</span>)*  
-  *See info on how to use these [below](#shuriken)*
+  *See info on how to use these [below](#guide/shuriken)*
 
 ### <img class="icon" src="assets/guide/icons/autopet_rules.webp"> [Autopet](https://hypixelskyblock.minecraft.wiki/w/Autopet) Rules:
 
@@ -199,3 +199,5 @@ Extremely Real Shuriken can be thrown at Scathas before killing them to tag them
 <span class="color-yellow">You need to hit the head of the Scatha for the effect to apply!</span>  
 [Bob-ombs](https://hypixelskyblock.minecraft.wiki/w/Bob-omb) can help to prevent accidentally hitting blocks instead.  
 Once tagged, the nametag will include the "<span class="color-aqua">✯</span>" symbol - make sure to then still use your Magic Find weapon for killing the Scatha!
+
+You can calculate whether it's worth using Shuriken for you with the [Shuriken Money Calculator](#calculators/shuriken-money).

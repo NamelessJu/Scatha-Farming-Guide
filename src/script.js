@@ -262,6 +262,14 @@ function generateHeaderIds(element) {
 	let subHeaders = element.querySelectorAll('h2,h3');
 	for (let i = 0; i < subHeaders.length; i ++) {
 		let tag = subHeaders[i].innerText.toLowerCase().replace(/[^a-z\s]/gi, '').trim().replace(/\s/g, "-");
+
+        let currentElement = subHeaders[i];
+        while (currentElement.parentElement != null && currentElement.parentElement != document.body) {
+            currentElement = currentElement.parentElement;
+            if (!currentElement.classList.contains("tab")) continue;
+            tag = currentElement.id + "/" + tag;
+        }
+
 		subHeaders[i].id = tag;
 	}
 }
