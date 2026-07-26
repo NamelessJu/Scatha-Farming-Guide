@@ -69,11 +69,6 @@ window.addEventListener('DOMContentLoaded', () => {
             resultContainer.removeChild(resultContainer.lastChild);
         }
 
-        let heading = document.createElement('h3');
-        heading.innerText = 'Result:'
-        heading.style.marginTop = '0';
-        resultContainer.appendChild(heading);
-
         let table = document.createElement('table');
         addEntry(table, rarities.any, anyChance, !withKills ? `(${calculateAverageKills(anyChance)} kills on average)` : '');
         addEntry(table, rarities.rare, rareChance, !withKills ? `(${calculateAverageKills(rareChance)} kills on average)` : '');
