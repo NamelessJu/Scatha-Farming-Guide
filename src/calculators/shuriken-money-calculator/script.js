@@ -6,7 +6,7 @@ window.addEventListener('DOMContentLoaded', () => {
     const inputPetPriceLegendary = document.getElementById('calc-shurikenmoney-input-petpricelegendary');
 
     function readInput(input) {
-        return readNumberInput(input, 0, Infinity, allowDecimals, true);
+        return readNumberInput(input, 0, Infinity, true, true);
     }
 
     function calculate() {
