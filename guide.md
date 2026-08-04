@@ -67,14 +67,12 @@ Pet item:
 
 #### Mining pets:
 
-New tunnel *(one of)*:  
-1. Legendary [Bal Pet](https://hypixelskyblock.minecraft.wiki/w/Bal_Pet) *(<span class="color-red">+<span class="stats-progression">1.5-</span>150 ♨ Heat Resistance</span>, <span class="color-dark-green">reduces Pickaxe Ability cooldowns by <span class="stats-progression">0.1-</span>10%</span>)*  
+- New tunnel:  
+  Legendary [Bal Pet](https://hypixelskyblock.minecraft.wiki/w/Bal_Pet) *(<span class="color-red">+<span class="stats-progression">1.5-</span>150 ♨ Heat Resistance</span>)*  
   *Can additionally be used for reducing your heat, as killing mobs with this pet equipped reduces it by 4*
-1. [Crow Pet](https://hypixelskyblock.minecraft.wiki/w/Crow_Pet) *(<span class="color-dark-green">reduces ability cooldowns by <span class="stats-progression">3.07-</span>15%</span>)*
-
-Tunnel ceiling:  
-*(see [strategy](#guide/mining) for what this means)*  
-Legendary or Mythic [Armadillo](https://hypixelskyblock.minecraft.wiki/w/Armadillo_Pet) *(<span class="color-yellow">+<span class="stats-progression">3-</span>300 ▚ Mining Spread</span>)*
+- Tunnel ceiling:  
+  *(see [strategy](#guide/mining) for what this means)*  
+  Legendary or Mythic [Armadillo](https://hypixelskyblock.minecraft.wiki/w/Armadillo_Pet) *(<span class="color-yellow">+<span class="stats-progression">3-</span>300 ▚ Mining Spread</span>)*
 
 ### <img class="icon" src="assets/guide/icons/rift_necklace.webp"> Equipment:︎︎
 
@@ -119,16 +117,30 @@ On all *(/ as many as possible)* accessories:
 - [Taming](https://hypixelskyblock.minecraft.wiki/w/Taming) skill level *(<span class="color-light-purple">+<span class="stats-progression">1-</span>60 ♣</span>)*
 - [Pet Score](https://hypixelskyblock.minecraft.wiki/w/Pets#Pet_Score) *(<span class="color-aqua">+<span class="stats-progression">1-</span>13 ✯</span>)*
 - Attributes:
-  - [Magic Find](https://hypixelskyblock.minecraft.wiki/w/Attributes#Magic_Find) *(<span class="color-aqua">+<span class="stats-progression">0.5-</span>5 ✯</span>)*
-  - [Rare Bird](https://hypixelskyblock.minecraft.wiki/w/Attributes#Rare_Bird) *(<span class="color-light-purple">+<span class="stats-progression">1-</span>10 ♣</span>)*
-  - [Yog Membrane](https://hypixelskyblock.minecraft.wiki/w/Attributes#Yog_Membrane) *(<span class="color-red">+<span class="stats-progression">1-</span>10 ♨ Heat Resistance</span>)*
+  - Main:
+    - [Magic Find](https://hypixelskyblock.minecraft.wiki/w/Attributes#Magic_Find) *(dropped by [Cinderbat](https://hypixelskyblock.minecraft.wiki/w/Cinderbat); <span class="color-aqua">+<span class="stats-progression">0.5-</span>5 ✯</span>)*
+    - [Elusive Fortune](https://hypixelskyblock.minecraft.wiki/w/Attributes#Elusive_Fortune) *(dropped by [Hideyho](https://hypixelskyblock.minecraft.wiki/w/Hideyho); <span class="color-aqua">+<span class="stats-progression">0.5-</span>5 ✯</span> on ❃ Elusive mobs)*
+    - [Subterranean Fortune](https://hypixelskyblock.minecraft.wiki/w/Attributes#Subterranean_Fortune) *(dropped by [Chuckwalla](https://hypixelskyblock.minecraft.wiki/w/Chuckwalla); <span class="color-aqua">+<span class="stats-progression">0.5-</span>5 ✯</span> on ⸕ Subterranean mobs)*
+    - [Tracking](https://hypixelskyblock.minecraft.wiki/w/Attributes#Tracking) *(fusing; <span class="color-light-purple">+<span class="stats-progression">0.5-</span>5 ❃ Tracking</span>)*
+    - [Cavernous Tracker](https://hypixelskyblock.minecraft.wiki/w/Attributes#Cavernous_Tracker) *(dropped by [Rockmite](https://hypixelskyblock.minecraft.wiki/w/Rockmite); <span class="color-light-purple">+<span class="stats-progression">0.5-</span>5 ❃ Tracking</span> on Mining Islands)*
+    - [Echo of Tracking](https://hypixelskyblock.minecraft.wiki/w/Attributes#Echo_of_Tracking) *(dropped by [Doomspiral](https://hypixelskyblock.minecraft.wiki/w/Doomspiral); "Tracker" attributes are +<span class="stats-progression">2-</span>20% stronger)*
+    - [Pickaxe Cooldown](https://hypixelskyblock.minecraft.wiki/w/Attributes#Pickaxe_Cooldown) *(dropped by [Abyssal Miner](https://hypixelskyblock.minecraft.wiki/w/Abyssal_Miner); <span class="color-dark-green">reduces Pickaxe Ability cooldowns by <span class="stats-progression">1-</span>10%</span>)*
+    - [Yog Membrane](https://hypixelskyblock.minecraft.wiki/w/Attributes#Yog_Membrane) *(dropped by [Yog](https://hypixelskyblock.minecraft.wiki/w/Yog); <span class="color-red">+<span class="stats-progression">1-</span>10 ♨ Heat Resistance</span>)*
+    - [Devouring Spread](https://hypixelskyblock.minecraft.wiki/w/Attributes#Devouring_Spread) *(dropped by [Gemzie](https://hypixelskyblock.minecraft.wiki/w/Gemzie); <span class="color-yellow">+<span class="stats-progression">0.25-</span>2.5 {▚gs} Gemstone Spread</span>)*
+    - <span class="color-red">DISABLE</span> [Sleepy Spread](https://hypixelskyblock.minecraft.wiki/w/Attributes#Sleepy_Spread) *([Snoozle](https://hypixelskyblock.minecraft.wiki/w/Snoozle); <span class="color-yellow">+<span class="stats-progression">1-</span>10 ▚ Mining Spread</span> on Mining Islands)*  
+    *Toggling it creates too much downtime in comparison to how small of an effect it has*
+  - Increased passive money:
+    - [Fortunate Miner](https://hypixelskyblock.minecraft.wiki/w/Attributes#Fortunate_Miner) *(dropped by [Flitter](https://hypixelskyblock.minecraft.wiki/w/Flitter); <span class="color-gold">+<span class="stats-progression">2.5-</span>25 ☘ Mining Fortune</span>)*
+    - [Gold Box](https://hypixelskyblock.minecraft.wiki/w/Attributes#Gold_Box) *(dropped by [Hideonsun](https://hypixelskyblock.minecraft.wiki/w/Hideonsun); <span class="color-gold">+<span class="stats-progression">5-</span>50 ☘ Mining Fortune</span>)*
+    - [Mossy Box](https://hypixelskyblock.minecraft.wiki/w/Attributes#Mossy_Box) *(dropped by [Hideonleaf](https://hypixelskyblock.minecraft.wiki/w/Hideonleaf); <span class="color-gold">+<span class="stats-progression">5-</span>50 ☘ Block Fortune</span>)*
+    - [Echo of Boxes](https://hypixelskyblock.minecraft.wiki/w/Attributes#Echo_of_Boxes) *(fusing; "Box" attributes are +<span class="stats-progression">2-</span>20% stronger)*
 - Treasure of the Earth perk from the [Gold Essence Shop](https://hypixelskyblock.minecraft.wiki/w/Marigold#Gold_Essence_Shop) *(<span class="color-dark-green">+<span class="stats-progression">2-</span>10% worm spawn chance</span>)*
 - [Enderman Slayer](https://hypixelskyblock.minecraft.wiki/w/Enderman_Slayer) level 9 *(<span class="color-light-purple">+5 ❃ Tracking</span>)*
 - [Brain Food](https://hypixelskyblock.minecraft.wiki/w/Brain_Food) *(<span class="color-light-purple">+<span class="stats-progression">1-</span>5 ❃ Tracking</span>)*
 - [Diana's Bookshelf](https://hypixelskyblock.minecraft.wiki/w/Diana%27s_Bookshelf) *(<span class="color-aqua">+1 ✯</span> & <span class="color-light-purple">+1 ❃ Tracking</span>)*
 - [Necron's Ladder](https://hypixelskyblock.minecraft.wiki/w/Necron%27s_Ladder) *(<span class="color-aqua">+1 ✯</span>)*
-- Worm [Bestiary](https://hypixelskyblock.minecraft.wiki/w/Bestiary#Crystal_Hollows) level *(<span class="color-aqua">+<span class="stats-progression">3-</span>45 ✯</span>)*
-  *(Kill those regular worms too, don't let them think they are safe just because they don't drop a cool pet...)*
+- [Worm Bestiary](https://hypixelskyblock.minecraft.wiki/w/Bestiary#Crystal_Hollows) level *(250 worm kills for max; <span class="color-aqua">+<span class="stats-progression">3-</span>45 ✯</span>)*
+  *(Kill those regular worms too, they aren't safe just because they don't drop a cool pet!)*
 - [Year of the Witch](https://hypixelskyblock.minecraft.wiki/w/Year_of_the_Witch):
   - [Gemstone Goulash](https://hypixelskyblock.minecraft.wiki/w/Gemstone_Goulash) *(<span class="color-aqua">+1 ✯</span> on ⸕ Subterranean mobs)*
   - [Effervescent Bouillon](https://hypixelskyblock.minecraft.wiki/w/Effervescent_Bouillon) *(<span class="color-aqua">+1 ✯</span> on ❃ Elusive mobs)*

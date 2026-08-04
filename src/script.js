@@ -195,8 +195,10 @@ function replaceHypixelIcons(str) {
     return str
         .replace(/✯/g, getHypixelIconString('hicon-stat hicon-magic-find', '✯'))
         .replace(/♣/g, getHypixelIconString('hicon-stat hicon-pet-luck', '♣'))
+        .replace(/{▚gs}/g, getHypixelIconString('hicon-stat hicon-gemstone-spread', '▚'))
         .replace(/▚/g, getHypixelIconString('hicon-stat hicon-mining-spread', '▚'))
         .replace(/♨/g, getHypixelIconString('hicon-stat hicon-heat-resistance', '♨'))
+        .replace(/☘/g, getHypixelIconString('hicon-skill hicon-mining-fortune', '☘'))
         .replace(/⸕/g, getHypixelIconString('hicon-mob hicon-subterranean', '⸕'))
         .replace(/❃/g, getHypixelIconString('hicon-mob hicon-elusive', '❃'))
         .replace(/⛨/g, getHypixelIconString('hicon-mob hicon-shielded', '⛨'))

@@ -217,9 +217,15 @@ summary::before {
     content: '>';
     margin-right: 0.5em;
     transform-origin: 50% 50%;
+    vertical-align: center;
 }
 :open > summary::before {
     rotate: 90deg;
+    text-shadow: 0.1em -0.1em 0em hsl(from currentColor h s calc(l * 0.25));
+}
+
+summary div {
+    display: inline-block;
 }
 
 input {
@@ -410,6 +416,12 @@ input.invalid {
     image-rendering: pixelated;
 }
 
+.hicon-skill {
+    -webkit-mask-image: url("../assets/images/hypixel/skills.png");
+    mask-image: url("../assets/images/hypixel/skills.png");
+    mask-size: calc(4em * var(--hypixel-icon-scale));
+}
+
 .hicon-stat {
     -webkit-mask-image: url("../assets/images/hypixel/stats.png");
     mask-image: url("../assets/images/hypixel/stats.png");
@@ -437,9 +449,19 @@ input.invalid {
     mask-position: calc(-6em * var(--hypixel-icon-scale)) calc(-2em * var(--hypixel-icon-scale));
 }
 
+.hicon-gemstone-spread {
+    -webkit-mask-position: calc(-7em * var(--hypixel-icon-scale)) calc(-1em * var(--hypixel-icon-scale));
+    mask-position: calc(-7em * var(--hypixel-icon-scale)) calc(-1em * var(--hypixel-icon-scale));
+}
+
 .hicon-heat-resistance {
     -webkit-mask-position: calc(-2em * var(--hypixel-icon-scale)) calc(-2em * var(--hypixel-icon-scale));
     mask-position: calc(-2em * var(--hypixel-icon-scale)) calc(-2em * var(--hypixel-icon-scale));
+}
+
+.hicon-mining-fortune {
+    -webkit-mask-position: calc(-3em * var(--hypixel-icon-scale)) 0;
+    mask-position: calc(-3em * var(--hypixel-icon-scale)) 0;
 }
 
 .hicon-subterranean {
@@ -474,6 +496,11 @@ input.invalid {
 
 #changelogs summary {
     font-size: 1.5em;
+}
+
+.changelog-subtitle {
+    font-size: 0.75em;
+    color: var(--color-gray);
 }
 
 #pet-drop-overlay {
