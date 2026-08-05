@@ -213,3 +213,10 @@ Extremely Real Shuriken can be thrown at Scathas before killing them to tag them
 Once tagged, the nametag will include the "<span class="color-aqua">✯</span>" symbol - make sure to then still use your Magic Find weapon for killing the Scatha!
 
 You can calculate whether it's worth using Shuriken for you with the [Shuriken Money Calculator](#calculators/shuriken-money).
+
+### Hunting
+
+Scathas can be hunted with a black hole to receive Scatha shards *(+<span class="stats-progression">1-</span>10% chance of finding Glossy Gemstones during Mining Fiestas)* for extra money.  
+For this, you need to get the Scatha to 1 remaining heart and then place the black hole in front of it.  
+<span class="color-yellow">Note:</span> Huntaxes do NOT work on Scathas *(due to them being hit-based instead of regular HP)*, so be careful not to accidentally kill them!  
+You can still drop a Scatha pet when using a black hole!
