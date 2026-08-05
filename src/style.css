@@ -207,6 +207,7 @@ summary {
     cursor: pointer;
     padding: 0.2em 0;
     list-style-type: none;
+    line-height: 1;
 }
 summary::marker {
     display: none;
