@@ -217,7 +217,16 @@ You can calculate whether it's worth using Shuriken for you with the [Shuriken M
 
 ### Hunting
 
-Scathas can be hunted with a black hole to receive Scatha shards *(+<span class="stats-progression">1-</span>10% chance of finding Glossy Gemstones during Mining Fiestas)* for extra money.  
-For this, you need to get the Scatha to 1 remaining heart and then place the black hole in front of it.  
-<span class="color-yellow">Note:</span> Huntaxes do NOT work on Scathas *(due to them being hit-based instead of regular HP)*, so be careful not to accidentally kill them!  
-You can still drop a Scatha pet when using a black hole!
+Scathas can be hunted with a [Black Hole](https://hypixelskyblock.minecraft.wiki/w/Black_Holes) to receive Scatha shards *(+<span class="stats-progression">1-</span>10% chance of finding Glossy Gemstones during Mining Fiestas)* for extra money.  
+For this, you need to get the Scatha to 1 remaining heart and then place the Black Hole in front of it.  
+Make sure to disable all extra hit sources like Ferocity, Fire Aspect & Venomous enchantment so you don't accidentally kill the Scatha!  
+Then, while the Scatha is in the Black Hole, hold your Magic Find weapon, as the drops roll at the same time that you receive the Shard(s).
+
+<span class="color-yellow">Note:</span>
+- You can still drop a Scatha pet when using a Black Hole!
+- Huntaxes do NOT work on Scathas *(presumably due to them being hit-based instead of using regular Health)*
+- Shuriken Magic Find does NOT apply when using a Black Hole, due to a bug
+- Scathas can NOT be charmed!
+
+Regular Worms can also be hunted, but only by [charming](https://hypixelskyblock.minecraft.wiki/w/Charm_Chance) them.  
+*(Stoneworm Shard: +<span class="stats-progression">1-</span>10% chance of finding Refined Minerals during Mining Fiestas)*
