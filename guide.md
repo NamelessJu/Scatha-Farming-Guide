@@ -158,6 +158,7 @@ On all *(/ as many as possible)* accessories:
 - [Century Cakes](https://hypixelskyblock.minecraft.wiki/w/Century_Cakes):
   - Century Cake of the Next Dungeon Floor *(<span class="color-aqua">+1 ✯</span>)*
   - Streamer's Century Cake *(<span class="color-light-purple">+1 ♣</span>)*
+  - Hephaestus's Century Cake *(<span class="color-light-purple">+1 ❃</span>)*
 - [Extremely Real Shuriken](https://hypixelskyblock.minecraft.wiki/w/Extremely_Real_Shuriken) *(<span class="color-aqua">+5% ✯</span>)*  
   *See info on how to use these [below](#guide/shuriken)*
 
