@@ -7,7 +7,6 @@ const konamiCodeKeycodes = [
 const petDropFrameCount = 180;
 const petDropFps = 60;
 
-let guideContainerElement;
 let progressionInfoImage;
 let fontImage;
 let petDropOverlayImage;
@@ -19,21 +18,39 @@ let petDropAnimationFrameRequest = null;
 
 
 if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('serviceWorker.js', {
-        updateViaCache: 'none'
-    }).then(registration => {
-        // ignore first install
-        if (!registration.active) return;
+    let isInstalled = window.matchMedia('(display-mode: minimal-ui)').matches // needs to match the value in manifest.json!
+        || document.referrer.includes('android-app://') // Android TWA
+        || window.navigator.standalone === true; // iOS "Add to Home Screen"
 
-        function handleNewServiceWorker() {
-            registration.installing.addEventListener('statechange', () => {
-                document.getElementById('update-notice')?.removeAttribute('hidden');
+    if (isInstalled) {
+        navigator.serviceWorker.register('serviceWorker.js', {
+            updateViaCache: 'none'
+        }).then(registration => {
+            // ignore first install
+            if (!registration.active) return;
+
+            function handleNewServiceWorker() {
+                registration.installing.addEventListener('statechange', () => {
+                    document.getElementById('update-notice')?.removeAttribute('hidden');
+                });
+            }
+
+            if (registration.installing) handleNewServiceWorker();
+            registration.addEventListener('updatefound', () => handleNewServiceWorker());
+        });
+    }
+    else {
+        navigator.serviceWorker.getRegistrations().then(registrations => {
+            registrations.forEach(registration => {
+                let worker = registration.active || registration.waiting || registration.installing;
+                if (worker) worker.postMessage('uninstall');
+                else registration.unregister();
             });
+        });
+        if (window.caches) {
+            caches.keys().then(keys => keys.forEach(key => caches.delete(key)));
         }
-
-        if (registration.installing) handleNewServiceWorker();
-        registration.addEventListener('updatefound', () => handleNewServiceWorker());
-    });
+    }
 }
 
 window.addEventListener('beforeinstallprompt', event => {
@@ -65,7 +82,6 @@ window.addEventListener('DOMContentLoaded', () => {
 });
 
 window.addEventListener('load', () => {
-    guideContainerElement = document.getElementById('guide');
     progressionInfoImage = document.querySelector('#toggle-progression-info img');
     fontImage = document.querySelector('#toggle-font img');
     petDropOverlayImage = document.getElementById('pet-drop-overlay');
@@ -91,24 +107,9 @@ window.addEventListener('load', () => {
         silent: false
     });
 
-    loadGuide()
-        .then(() => {
-            modifyContent();
-
-            // scroll to hash on initial page load
-            if (getNavigationType() === 'navigate') {
-                const hash = getCleanHash();
-                if (hash != null) {
-                    const hashTarget = document.getElementById(hash);
-                    if (hashTarget != null && guideContainerElement.contains(hashTarget)) {
-                        scrollToHash();
-                    }
-                }
-            }
-        })
-        .catch(error => {
-            console.error(error);
-        });
+    loadContent('guide/guide.md', document.getElementById('guide'));
+    loadContent('guide/meta_changelog.md', document.getElementById('meta-changes'));
+    loadContent('page_changelog.md', document.getElementById('page-updates'));
 });
 
 window.addEventListener('keydown', event => {
@@ -165,30 +166,53 @@ function openTabsForHash() {
     if (hashRefreshRequired) scrollToHash();
 }
 
-function loadGuide() {
+function loadContent(relativePath, containerElement) {
+    const setErrorMessageResult = () => containerElement.innerHTML = '<center>Failed to load content</center>';
+
+    if (!(containerElement instanceof HTMLElement)) {
+        setErrorMessageResult();
+        return Promise.reject('Container element is not an HTML element');
+    }
+
     return new Promise((resolve, reject) => {
         const onError = error => {
-            guideContainerElement.innerHTML = '<center>Failed to load guide :(</center>'
+            setErrorMessageResult();
             reject(error);
         };
 
-        fetch('guide.md')
+        fetch('content/' + relativePath)
             .then(response => {
                 if (response.status !== 200) {
-                    onError(`Guide document returned status ${response.status}`);
+                    onError(`Content document "${relativePath}" returned status ${response.status}`);
                     return;
                 }
 
                 response.text()
                     .then(markdown => {
                         markdown = replaceHypixelIcons(markdown);
-                        guideContainerElement.innerHTML = marked.parse(markdown);
+                        containerElement.innerHTML = marked.parse(markdown);
                         resolve();
                     })
                     .catch(error => onError(error));
             })
             .catch(error => onError(error));
-    });
+    }).then(
+        () => {
+            patchContent(containerElement);
+
+            // scroll to hash on initial page load
+            if (getNavigationType() === 'navigate') {
+                const hash = getCleanHash();
+                if (hash != null) {
+                    const hashTarget = document.getElementById(hash);
+                    if (hashTarget != null && containerElement.contains(hashTarget)) {
+                        scrollToHash();
+                    }
+                }
+            }
+        },
+        error => console.error(error)
+    );
 }
 
 function replaceHypixelIcons(str) {
@@ -208,8 +232,8 @@ function getHypixelIconString(classList, unicodeSymbol) {
     return '<span class="hicon-container"><span class="' + classList + '"></span><span class="invisible">' + unicodeSymbol + '</span></span>';
 }
 
-function modifyContent() {
-    guideContainerElement.querySelectorAll('a[href]').forEach(link => {
+function patchContent(element) {
+    element.querySelectorAll('a[href]').forEach(link => {
         if (new URL(link.href).origin == new URL(window.location).origin) {
             return;
         }
@@ -218,7 +242,7 @@ function modifyContent() {
         link.setAttribute('rel', 'noopener noreferrer');
     });
 
-    generateHeaderIds(guideContainerElement);
+    generateHeaderIds(element);
 }
 
 

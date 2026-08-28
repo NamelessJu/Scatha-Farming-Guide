@@ -1,7 +1,7 @@
 
 // Bump either of these to invalidate caches when changes are made
-const CACHE_GUIDE = 'guide-v13';
-const CACHE_PAGE = 'page-v15';
+const CACHE_GUIDE = 'guide-v14';
+const CACHE_PAGE = 'page-v16';
 
 const BASE_PATH = '/Scatha-Farming-Guide/';
 
@@ -16,7 +16,7 @@ function getCacheName(urlString) {
     ) return null;
 
     if (
-        localPath == 'guide.md' || localPath.startsWith('assets/guide/')
+        localPath.startsWith('content/guide/') || localPath.startsWith('assets/guide/')
     ) return CACHE_GUIDE;
 
     if (
@@ -89,4 +89,18 @@ self.addEventListener('fetch', event => {
         ));
     }
     else event.respondWith(fetch(event.request));
+});
+
+self.addEventListener('message', event => {
+    if (event.data == 'uninstall') {
+        event.waitUntil((async () => {
+            let keys = await caches.keys();
+            await Promise.all(keys.map(key => caches.delete(key)));
+
+            let clients = await self.clients.matchAll({ type: 'window' });
+            clients.forEach(client => client.navigate(client.url));
+
+            await self.registration.unregister();
+        })());
+    }
 });
