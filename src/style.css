@@ -202,6 +202,7 @@ details {
 }
 
 summary {
+    display: flex;
     margin-left: -1em;
     user-select: none;
     cursor: pointer;
@@ -218,7 +219,7 @@ summary::before {
     content: '>';
     margin-right: 0.5em;
     transform-origin: 50% 50%;
-    vertical-align: center;
+    align-self: center;
 }
 :open > summary::before {
     rotate: 90deg;
