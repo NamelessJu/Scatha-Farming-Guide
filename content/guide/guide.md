@@ -217,7 +217,9 @@ You can calculate whether it's worth using Shuriken for you with the [Shuriken M
 
 ### Hunting
 
-Scathas are elusive and therefore are always automatically charmed on kill!   *(Scatha shard: +<span class="stats-progression">1-</span>10% chance of finding Glossy Gemstones during Mining Fiestas)*
+Scathas are elusive and therefore are always automatically charmed on kill!  
+*(Scatha shard: +<span class="stats-progression">1-</span>10% chance of finding Glossy Gemstones during Mining Fiestas)*  
+You can use a [Pocket Black Hole](https://hypixelskyblock.minecraft.wiki/w/Black_Holes) for extra [Hunting Fortune](https://hypixelskyblock.minecraft.wiki/w/Hunting_Fortune), but this <span class="color-yellow">prevents the Shuriken Magic Find bonus</span> from applying, so only do this if you prioritize the shards!
 
 Stoneworms can also be charmed, but they use the regular [Charm Chance](https://hypixelskyblock.minecraft.wiki/w/Charm_Chance).  
 *(Stoneworm Shard: +<span class="stats-progression">1-</span>10% chance of finding Refined Minerals during Mining Fiestas)*
