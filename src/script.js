@@ -7,7 +7,6 @@ const konamiCodeKeycodes = [
 const petDropFrameCount = 180;
 const petDropFps = 60;
 
-let guideContainerElement;
 let progressionInfoImage;
 let fontImage;
 let petDropOverlayImage;
@@ -19,21 +18,39 @@ let petDropAnimationFrameRequest = null;
 
 
 if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('serviceWorker.js', {
-        updateViaCache: 'none'
-    }).then(registration => {
-        // ignore first install
-        if (!registration.active) return;
+    let isInstalled = window.matchMedia('(display-mode: minimal-ui)').matches // needs to match the value in manifest.json!
+        || document.referrer.includes('android-app://') // Android TWA
+        || window.navigator.standalone === true; // iOS "Add to Home Screen"
 
-        function handleNewServiceWorker() {
-            registration.installing.addEventListener('statechange', () => {
-                document.getElementById('update-notice')?.removeAttribute('hidden');
+    if (isInstalled) {
+        navigator.serviceWorker.register('serviceWorker.js', {
+            updateViaCache: 'none'
+        }).then(registration => {
+            // ignore first install
+            if (!registration.active) return;
+
+            function handleNewServiceWorker() {
+                registration.installing.addEventListener('statechange', () => {
+                    document.getElementById('update-notice')?.removeAttribute('hidden');
+                });
+            }
+
+            if (registration.installing) handleNewServiceWorker();
+            registration.addEventListener('updatefound', () => handleNewServiceWorker());
+        });
+    }
+    else {
+        navigator.serviceWorker.getRegistrations().then(registrations => {
+            registrations.forEach(registration => {
+                let worker = registration.active || registration.waiting || registration.installing;
+                if (worker) worker.postMessage('uninstall');
+                else registration.unregister();
             });
+        });
+        if (window.caches) {
+            caches.keys().then(keys => keys.forEach(key => caches.delete(key)));
         }
-
-        if (registration.installing) handleNewServiceWorker();
-        registration.addEventListener('updatefound', () => handleNewServiceWorker());
-    });
+    }
 }
 
 window.addEventListener('beforeinstallprompt', event => {

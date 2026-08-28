@@ -90,3 +90,17 @@ self.addEventListener('fetch', event => {
     }
     else event.respondWith(fetch(event.request));
 });
+
+self.addEventListener('message', event => {
+    if (event.data == 'uninstall') {
+        event.waitUntil((async () => {
+            let keys = await caches.keys();
+            await Promise.all(keys.map(key => caches.delete(key)));
+
+            let clients = await self.clients.matchAll({ type: 'window' });
+            clients.forEach(client => client.navigate(client.url));
+
+            await self.registration.unregister();
+        })());
+    }
+});
