@@ -16,7 +16,7 @@ function getCacheName(urlString) {
     ) return null;
 
     if (
-        localPath == 'guide.md' || localPath.startsWith('assets/guide/')
+        localPath.startsWith('content/guide/') || localPath.startsWith('assets/guide/')
     ) return CACHE_GUIDE;
 
     if (
