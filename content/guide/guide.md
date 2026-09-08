@@ -105,9 +105,9 @@ On all *(/ as many as possible)* accessories:
 - Core of the Mountain level 2 *([HOTM Tier 5](https://hypixelskyblock.minecraft.wiki/w/Heart_of_the_Mountain#Tier_5) - <span class="color-dark-green">+1 Pickaxe Ability level</span>)*
 - Tunnel Vision pickaxe ability *([HOTM Tier 6](https://hypixelskyblock.minecraft.wiki/w/Heart_of_the_Mountain#Tier_6) - <span class="color-dark-green">increases the worm spawn chance by <span class="stats-progression">30-</span>50% for 30s</span>)*
 - Keep It Cool *([HOTM Tier 6](https://hypixelskyblock.minecraft.wiki/w/Heart_of_the_Mountain#Tier_6) - <span class="color-red">+<span class="stats-progression">0.4-</span>20.4 ♨ Heat Resistance</span>)*
-- Great Explorer level 16 *([HOTM Tier 6](https://hypixelskyblock.minecraft.wiki/w/Heart_of_the_Mountain#Tier_6) - <span class="color-dark-green">reduces the amount of locks on chests by <span class="stats-progression">1-</span>5</span>)*  
+- Great Explorer level 20 *([HOTM Tier 6](https://hypixelskyblock.minecraft.wiki/w/Heart_of_the_Mountain#Tier_6) - <span class="color-dark-green">reduces the amount of locks on chests by 5</span> = insta-open)*  
   *Also increases the chest spawn rate, but being able to instantly open chests makes it worth it.*  
-  *Do <span class="color-red">**not**</span> use this perk if you can't reach level 16!*
+  *Do <span class="color-red">**not**</span> use this perk if you can't reach level 20!*
 - Miner's Blessing *([HOTM Tier 8](https://hypixelskyblock.minecraft.wiki/w/Heart_of_the_Mountain#Tier_8) - <span class="color-aqua">+30 ✯</span> on mining islands)*
 
 ### <img class="icon" src="assets/guide/icons/god_potion.webp"> Other Stat Sources:
