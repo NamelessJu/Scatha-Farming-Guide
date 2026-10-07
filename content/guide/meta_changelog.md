@@ -1,3 +1,17 @@
+<details>
+<summary>
+    <div>
+        Hypixel SkyBlock 0.27.2 <em>(Minister Update)</em><br>
+        <span class="changelog-subtitle">2026-10-07</span>
+    </div>
+</summary>
+
+- Scatha-in-a-Bottle Mixin was added *(+20 ❃ Scatha Tracking)*
+- Stoneworms & Scathas now drop Worm Membranes *(1x & 4x respectively, both 100% chance)*
+
+[Full SkyBlock Patch Notes](https://hypixel.net/threads/hypixel-skyblock-0-27-2-the-minister-update-greenhouse-qol-and-more.6159904/)
+</details>
+
 
 <details>
 <summary>

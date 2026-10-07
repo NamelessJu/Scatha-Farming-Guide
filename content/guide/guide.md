@@ -150,6 +150,8 @@ On all *(/ as many as possible)* accessories:
 - [God Potion](https://hypixelskyblock.minecraft.wiki/w/God_Potion) *(<span class="color-aqua">+88 ✯</span>, <span class="color-light-purple">+20 ♣</span>)*
   *(Includes: [Magic Find Potion](https://hypixelskyblock.minecraft.wiki/w/Magic_Find_Potion), [Critical Potion](https://hypixelskyblock.minecraft.wiki/w/Critical_Potion) with [Slayer© Energy Drink](https://hypixelskyblock.minecraft.wiki/w/Slayer%C2%A9_Energy_Drink), [Jerry Candy](https://hypixelskyblock.minecraft.wiki/w/Jerry_Candy), [Pet Luck IV Potion](https://hypixelskyblock.minecraft.wiki/w/Pet_Luck_Potion))*
 - Mixins:
+  - [Scatha-in-a-Bottle](https://hypixelskyblock.minecraft.wiki/w/Scatha-in-a-Bottle) *(<span class="color-light-purple">+20 ❃ Tracking</span> towards Scathas)*  
+    *Note: Putting a Scatha into a Nothing-in-a-Bottle does NOT count as a kill and therefore doesn't grant you any of the Scatha drops!*
   - [Hot Chocolate Mixin](https://hypixelskyblock.minecraft.wiki/w/Hot_Chocolate_Mixin) *(<span class="color-light-purple">+15 ♣</span>)*
   - [Celestial Mason Jar](https://hypixelskyblock.minecraft.wiki/w/Celestial_Mason_Jar) *(<span class="color-aqua">+3 ✯</span>, <span class="color-light-purple">+5 ❃ Tracking</span>)*
 - [Booster Cookie](https://hypixelskyblock.minecraft.wiki/w/Booster_Cookie) *(<span class="color-aqua">+15 ✯</span>)*
