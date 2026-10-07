@@ -44,7 +44,7 @@ On any of the aforementioned weapons:
 - [Chimera](https://hypixelskyblock.minecraft.wiki/w/Chimera) enchantment *(<span class="color-dark-green">copies <span class="stats-progression">20-</span>100% of your pet's stats</span>)*  
 - [Divine Gift](https://hypixelskyblock.minecraft.wiki/w/Divine_Gift) enchantment *(<span class="color-aqua">+<span class="stats-progression">2-</span>6 ✯</span>)*  
 - [Looting](https://hypixelskyblock.minecraft.wiki/w/Looting) enchantment *(<span class="color-dark-green">+<span class="stats-progression">15-</span>75% chance for item drops</span>)*  
-  *Optional for more Dwarven O's Block Brans and gemstones, does <span class="color-red">**not**</span> apply to pet drops!*
+  *Optional for more Dwarven O's Block Brans, Worm Membranes and gemstones, does <span class="color-red">**not**</span> apply to pet drops!*
 
 Alternatively:  
 Any high rarity [fishing rod](https://hypixelskyblock.minecraft.wiki/w/Fishing_Rods)  
