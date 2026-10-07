@@ -1,6 +1,6 @@
 
 // Bump either of these to invalidate caches when changes are made
-const CACHE_GUIDE = 'guide-v16';
+const CACHE_GUIDE = 'guide-v17';
 const CACHE_PAGE = 'page-v16';
 
 const BASE_PATH = '/Scatha-Farming-Guide/';
