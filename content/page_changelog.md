@@ -1,3 +1,9 @@
+<details>
+<summary>2026-10-22</summary>
+
+adjusted calculators to use the correct statistical drop chances
+</details>
+
 
 <details>
 <summary>2026-07-26</summary>

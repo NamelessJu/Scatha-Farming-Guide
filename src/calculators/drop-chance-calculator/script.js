@@ -1,4 +1,12 @@
 window.addEventListener('DOMContentLoaded', () => {
+
+    const weirdHypixelRNGCalculationCoefficient = 0.6;
+    const petDropChanceAny = 0.004 * weirdHypixelRNGCalculationCoefficient;
+    const petDropChanceRare = 0.0024 * weirdHypixelRNGCalculationCoefficient;
+    const petDropChanceEpic = 0.0012 * weirdHypixelRNGCalculationCoefficient;
+    const petDropChanceLegendary = 0.0004 * weirdHypixelRNGCalculationCoefficient;
+
+
     const resultContainer = document.getElementById('calc-dropchance-result');
     const inputMagicFind = document.getElementById('calc-dropchance-input-mf');
     const inputPetLuck = document.getElementById('calc-dropchance-input-pl');
@@ -51,10 +59,10 @@ window.addEventListener('DOMContentLoaded', () => {
         let petLuck = readInput(inputPetLuck);
         let kills = readInput(inputKills, 1, false);
 
-        let anyChance = Math.min(1, calculateDropChance(0.004, magicFind, petLuck));
-        let rareChance = Math.min(6/10, calculateDropChance(0.0024, magicFind, petLuck));
-        let epicChance = Math.min(3/10, calculateDropChance(0.0012, magicFind, petLuck));
-        let legendaryChance = Math.min(1/10, calculateDropChance(0.0004, magicFind, petLuck));
+        let anyChance = Math.min(1, calculateDropChance(petDropChanceAny, magicFind, petLuck));
+        let rareChance = Math.min(petDropChanceRare/petDropChanceAny, calculateDropChance(petDropChanceRare, magicFind, petLuck));
+        let epicChance = Math.min(petDropChanceEpic/petDropChanceAny, calculateDropChance(petDropChanceEpic, magicFind, petLuck));
+        let legendaryChance = Math.min(petDropChanceLegendary/petDropChanceAny, calculateDropChance(petDropChanceLegendary, magicFind, petLuck));
 
         const withKills = kills > 1;
         if (withKills) {

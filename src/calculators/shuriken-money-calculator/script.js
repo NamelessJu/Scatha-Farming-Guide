@@ -1,4 +1,9 @@
 window.addEventListener('DOMContentLoaded', () => {
+
+    const weirdHypixelRNGCalculationCoefficient = 0.6;
+    const petDropChanceAny = 0.004 * weirdHypixelRNGCalculationCoefficient;
+
+
     const resultContainer = document.getElementById('calc-shurikenmoney-result');
     const inputMagicFind = document.getElementById('calc-shurikenmoney-input-mf');
     const inputPetPriceRare = document.getElementById('calc-shurikenmoney-input-petpricerare');
@@ -16,7 +21,7 @@ window.addEventListener('DOMContentLoaded', () => {
         let petPriceLegendary = readInput(inputPetPriceLegendary);
 
         let petPriceAverage = (6*petPriceRare + 3*petPriceEpic + petPriceLegendary) / 10 * 1000000;
-        let shurikenMoney = (petPriceAverage/(1/(0.004*((1.05*magicFind)/100 + 1))) - petPriceAverage/(1/(0.004*(magicFind/100 + 1)))) / 1000;
+        let shurikenMoney = (petPriceAverage/(1/(petDropChanceAny*((1.05*magicFind)/100 + 1))) - petPriceAverage/(1/(petDropChanceAny*(magicFind/100 + 1)))) / 1000;
 
         resultContainer.innerText = Math.round(shurikenMoney * 100) / 100;
     }

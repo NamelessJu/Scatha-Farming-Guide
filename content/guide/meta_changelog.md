@@ -1,6 +1,26 @@
 <details>
 <summary>
     <div>
+        <em>New Scatha RNG calculation info</em><br>
+        <span class="changelog-subtitle">2026-10-22</span>
+    </div>
+</summary>
+
+Thanks to YouTuber Toadstar0 contacting Hypixel we now know that pet drop calculations are not at all straight forward and it turns out that the actual drop rates for Scathas are 60% of what we assumed they'd be!
+
+It rolls as follows:
+1. rolling for any pet drop first, using the RARE chance (instead of summing the rarities up)
+2. then if that succeeds, it rolls for the rarity using the weights between all rarities, so 60% for rare, 30% for epic and 10% for legendary
+
+This means that the chances displayed in the bestiary are incorrect and the true statistical chances are those multiplied by 0.6!
+
+</details>
+
+
+
+<details>
+<summary>
+    <div>
         Hypixel SkyBlock 0.27.2 <em>(Minister Update)</em><br>
         <span class="changelog-subtitle">2026-10-07</span>
     </div>
@@ -11,6 +31,7 @@
 
 [Full SkyBlock Patch Notes](https://hypixel.net/threads/hypixel-skyblock-0-27-2-the-minister-update-greenhouse-qol-and-more.6159904/)
 </details>
+
 
 
 <details>
