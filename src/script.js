@@ -215,6 +215,10 @@ function loadContent(relativePath, containerElement) {
     );
 }
 
+function getTextIconString(iconName, invisibleText) {
+    return '<span class="texticon-container"><span class="texticon texticon-' + iconName + '"></span><span class="invisible">' + invisibleText + '</span></span>';
+}
+
 function replaceHypixelIcons(str) {
     return str
         .replace(/✯/g, getHypixelIconString('hicon-stat hicon-magic-find', '✯'))
@@ -229,7 +233,7 @@ function replaceHypixelIcons(str) {
 }
 
 function getHypixelIconString(classList, unicodeSymbol) {
-    return '<span class="hicon-container"><span class="' + classList + '"></span><span class="invisible">' + unicodeSymbol + '</span></span>';
+    return '<span class="texticon-container"><span class="' + classList + '"></span><span class="invisible">' + unicodeSymbol + '</span></span>';
 }
 
 function patchContent(element) {
@@ -285,7 +289,7 @@ function updateFont() {
 }
 
 function generateHeaderIds(element) {
-	let subHeaders = element.querySelectorAll('h2,h3');
+	let subHeaders = element.querySelectorAll('h2,h3,h4');
 	for (let i = 0; i < subHeaders.length; i ++) {
 		let tag = subHeaders[i].innerText.toLowerCase().replace(/[^a-z\s]/gi, '').trim().replace(/\s/g, "-");
 
@@ -296,7 +300,21 @@ function generateHeaderIds(element) {
             tag = currentElement.id + "/" + tag;
         }
 
-		subHeaders[i].id = tag;
+        subHeaders[i].id = tag;
+
+        let anchorCopyElement = document.createElement('span');
+        anchorCopyElement.classList.add('anchor-link');
+        anchorCopyElement.innerHTML = getTextIconString('link', '🔗');
+        anchorCopyElement.title = 'Click to copy link to this section to clipboard';
+        anchorCopyElement.dataset.anchor = tag;
+        anchorCopyElement.onclick = e => {
+            let url = new URL(window.location.href);
+            url.search = '';
+            url.hash = '#' + e.currentTarget.dataset.anchor;
+            navigator.clipboard.writeText(url.toString());
+        };
+        subHeaders[i].appendChild(document.createTextNode(' '));
+        subHeaders[i].appendChild(anchorCopyElement);
 	}
 }
 

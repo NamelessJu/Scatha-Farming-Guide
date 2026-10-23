@@ -118,6 +118,23 @@ h5, h6 {
     margin-top: 1em;
 }
 
+.anchor-link {
+    display: inline-block;
+    color: var(--color-dark-gray);
+    opacity: 0;
+    transition: opacity 0.2s ease, transform 0.05s ease-out;
+    cursor: pointer;
+    transform: scale(1);
+}
+
+.anchor-link:active {
+    transform: scale(0.8);
+}
+
+:is(h2, h3, h4):hover .anchor-link {
+    opacity: 1;
+}
+
 p {
     margin: 0.5em 0;
 }
@@ -402,83 +419,94 @@ input.invalid {
     image-rendering: pixelated;
 }
 
-.hicon-container {
-    --hypixel-icon-scale: 0.7;
+.texticon-container {
+    --texticon-scale: 0.7;
     display: inline-block;
     filter: drop-shadow(0.1em 0.1em 0em hsl(from currentColor h s calc(l * 0.25)));
 }
 
-.hicon-container > span {
+.texticon-container > span {
     display: inline-block;
-    width: calc(1em * var(--hypixel-icon-scale));
-    height: calc(1em * var(--hypixel-icon-scale));
+    width: calc(1em * var(--texticon-scale));
+    height: calc(1em * var(--texticon-scale));
     background: currentColor;
     -webkit-mask-repeat: no-repeat;
     mask-repeat: no-repeat;
     image-rendering: pixelated;
 }
 
+.texticon {
+    -webkit-mask-image: url("../assets/images/icons/text_icons.png");
+    mask-image: url("../assets/images/icons/text_icons.png");
+    mask-size: calc(1em * var(--texticon-scale));
+}
+
+.texticon-link {
+    -webkit-mask-position: 0 0;
+    mask-position: 0 0;
+}
+
 .hicon-skill {
     -webkit-mask-image: url("../assets/images/hypixel/skills.png");
     mask-image: url("../assets/images/hypixel/skills.png");
-    mask-size: calc(4em * var(--hypixel-icon-scale));
+    mask-size: calc(4em * var(--texticon-scale));
 }
 
 .hicon-stat {
     -webkit-mask-image: url("../assets/images/hypixel/stats.png");
     mask-image: url("../assets/images/hypixel/stats.png");
-    mask-size: calc(8em * var(--hypixel-icon-scale));
+    mask-size: calc(8em * var(--texticon-scale));
 }
 
 .hicon-mob {
     -webkit-mask-image: url("../assets/images/hypixel/mobs.png");
     mask-image: url("../assets/images/hypixel/mobs.png");
-    mask-size: calc(6em * var(--hypixel-icon-scale));
+    mask-size: calc(6em * var(--texticon-scale));
 }
 
 .hicon-magic-find {
-    -webkit-mask-position: calc(-2em * var(--hypixel-icon-scale)) calc(-3em * var(--hypixel-icon-scale));
-    mask-position: calc(-2em * var(--hypixel-icon-scale)) calc(-3em * var(--hypixel-icon-scale));
+    -webkit-mask-position: calc(-2em * var(--texticon-scale)) calc(-3em * var(--texticon-scale));
+    mask-position: calc(-2em * var(--texticon-scale)) calc(-3em * var(--texticon-scale));
 }
 
 .hicon-pet-luck {
-    -webkit-mask-position: calc(-3em * var(--hypixel-icon-scale)) calc(-2em * var(--hypixel-icon-scale));
-    mask-position: calc(-3em * var(--hypixel-icon-scale)) calc(-2em * var(--hypixel-icon-scale));
+    -webkit-mask-position: calc(-3em * var(--texticon-scale)) calc(-2em * var(--texticon-scale));
+    mask-position: calc(-3em * var(--texticon-scale)) calc(-2em * var(--texticon-scale));
 }
 
 .hicon-mining-spread {
-    -webkit-mask-position: calc(-6em * var(--hypixel-icon-scale)) calc(-2em * var(--hypixel-icon-scale));
-    mask-position: calc(-6em * var(--hypixel-icon-scale)) calc(-2em * var(--hypixel-icon-scale));
+    -webkit-mask-position: calc(-6em * var(--texticon-scale)) calc(-2em * var(--texticon-scale));
+    mask-position: calc(-6em * var(--texticon-scale)) calc(-2em * var(--texticon-scale));
 }
 
 .hicon-gemstone-spread {
-    -webkit-mask-position: calc(-7em * var(--hypixel-icon-scale)) calc(-1em * var(--hypixel-icon-scale));
-    mask-position: calc(-7em * var(--hypixel-icon-scale)) calc(-1em * var(--hypixel-icon-scale));
+    -webkit-mask-position: calc(-7em * var(--texticon-scale)) calc(-1em * var(--texticon-scale));
+    mask-position: calc(-7em * var(--texticon-scale)) calc(-1em * var(--texticon-scale));
 }
 
 .hicon-heat-resistance {
-    -webkit-mask-position: calc(-2em * var(--hypixel-icon-scale)) calc(-2em * var(--hypixel-icon-scale));
-    mask-position: calc(-2em * var(--hypixel-icon-scale)) calc(-2em * var(--hypixel-icon-scale));
+    -webkit-mask-position: calc(-2em * var(--texticon-scale)) calc(-2em * var(--texticon-scale));
+    mask-position: calc(-2em * var(--texticon-scale)) calc(-2em * var(--texticon-scale));
 }
 
 .hicon-mining-fortune {
-    -webkit-mask-position: calc(-3em * var(--hypixel-icon-scale)) 0;
-    mask-position: calc(-3em * var(--hypixel-icon-scale)) 0;
+    -webkit-mask-position: calc(-3em * var(--texticon-scale)) 0;
+    mask-position: calc(-3em * var(--texticon-scale)) 0;
 }
 
 .hicon-subterranean {
-    -webkit-mask-position: calc(-1em * var(--hypixel-icon-scale)) calc(-3em * var(--hypixel-icon-scale));
-    mask-position: calc(-1em * var(--hypixel-icon-scale)) calc(-3em * var(--hypixel-icon-scale));
+    -webkit-mask-position: calc(-1em * var(--texticon-scale)) calc(-3em * var(--texticon-scale));
+    mask-position: calc(-1em * var(--texticon-scale)) calc(-3em * var(--texticon-scale));
 }
 
 .hicon-elusive {
-    -webkit-mask-position: calc(-1em * var(--hypixel-icon-scale)) calc(-1em * var(--hypixel-icon-scale));
-    mask-position: calc(-1em * var(--hypixel-icon-scale)) calc(-1em * var(--hypixel-icon-scale));
+    -webkit-mask-position: calc(-1em * var(--texticon-scale)) calc(-1em * var(--texticon-scale));
+    mask-position: calc(-1em * var(--texticon-scale)) calc(-1em * var(--texticon-scale));
 }
 
 .hicon-shielded {
-    -webkit-mask-position: calc(-4em * var(--hypixel-icon-scale)) calc(-2em * var(--hypixel-icon-scale));
-    mask-position: calc(-4em * var(--hypixel-icon-scale)) calc(-2em * var(--hypixel-icon-scale));
+    -webkit-mask-position: calc(-4em * var(--texticon-scale)) calc(-2em * var(--texticon-scale));
+    mask-position: calc(-4em * var(--texticon-scale)) calc(-2em * var(--texticon-scale));
 }
 
 .invisible {
