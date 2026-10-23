@@ -110,6 +110,14 @@ window.addEventListener('load', () => {
     loadContent('guide/guide.md', document.getElementById('guide'));
     loadContent('guide/meta_changelog.md', document.getElementById('meta-changes'));
     loadContent('page_changelog.md', document.getElementById('page-updates'));
+
+    if (getNavigationType() === 'navigate') {
+        const hash = getCleanHash();
+        if (hash != null) {
+            const hashTarget = document.getElementById(hash);
+            if (hashTarget != null) scrollToHash();
+        }
+    }
 });
 
 window.addEventListener('keydown', event => {
@@ -199,17 +207,6 @@ function loadContent(relativePath, containerElement) {
     }).then(
         () => {
             patchContent(containerElement);
-
-            // scroll to hash on initial page load
-            if (getNavigationType() === 'navigate') {
-                const hash = getCleanHash();
-                if (hash != null) {
-                    const hashTarget = document.getElementById(hash);
-                    if (hashTarget != null && containerElement.contains(hashTarget)) {
-                        scrollToHash();
-                    }
-                }
-            }
         },
         error => console.error(error)
     );
