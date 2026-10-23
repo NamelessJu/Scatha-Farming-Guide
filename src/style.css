@@ -119,15 +119,19 @@ h5, h6 {
 }
 
 .anchor-link {
-    display: inline-block;
     color: var(--color-dark-gray);
     opacity: 0;
-    transition: opacity 0.2s ease, transform 0.05s ease-out;
+    transition: opacity 0.2s ease;
     cursor: pointer;
-    transform: scale(1);
 }
 
-.anchor-link:active {
+.anchor-link > .texticon-container {
+    display: inline-block;
+    transform: scale(1);
+    transition: transform 0.05s ease-out;
+}
+
+.anchor-link:active > .texticon-container {
     transform: scale(0.8);
 }
 
