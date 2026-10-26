@@ -199,14 +199,16 @@ Using this reforge means that you should mine in the <span class="color-yellow">
 
 ### Mining
 
+<span class="color-yellow" style="font-size: 1.25em;">**MINE ALONG THE X AXIS!**</span>  
+This is the community consensus to minimize the amount of orthogonal tunnels, as it is SUPER annoying to constantly accidentally walk into those.
+
 Use the Tunnel Vision ability whenever it's available *(apart from during the worm spawn cooldown, of course)*.
 
-You first mine a 1x2 tunnel with <span class="color-yellow">all Mining Spread sources **disabled**</span>!  
+1. You first mine a 1x2 tunnel with <span class="color-yellow">all Mining Spread sources **disabled**</span>!  
 *(You can use any mining armor for this and don't need to wait during spawn cooldowns)*
-
-Once you're done with the tunnel <span class="color-yellow">**enable** all Mining Spread sources</span> and go back through it, walking backwards and mining the ceiling block at an angle where you also hit the blocks to the side of the ceiling.  
-*This technique results in way higher spawn rates than mining a regular tunnel!*  
-<span class="color-yellow">Wait out any spawn cooldowns during this part!</span>
+2. Once you're done with the tunnel <span class="color-yellow">**enable** all Mining Spread sources</span> and go back through it, walking backwards and mining the ceiling block at an angle where you also hit the blocks to the side of the ceiling.  
+   *This technique results in way higher spawn rates than mining a regular tunnel!*  
+   <span class="color-yellow">Wait out any spawn cooldowns during this part!</span>
 
 ### Shuriken
 
