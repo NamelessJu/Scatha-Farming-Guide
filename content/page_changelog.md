@@ -1,4 +1,12 @@
 <details>
+<summary>2026-11-18</summary>
+
+adjusted calculators to use the updated drop chances & shuriken Magic Find values from the Magic Find Rework update
+</details>
+
+
+
+<details>
 <summary>2026-10-22</summary>
 
 adjusted calculators to use the correct statistical drop chances

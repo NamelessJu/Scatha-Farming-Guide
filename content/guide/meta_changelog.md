@@ -1,6 +1,21 @@
 <details>
 <summary>
     <div>
+        Hypixel SkyBlock 0.27.3 <em>(Magic Find Rework)</em><br>
+        <span class="changelog-subtitle">2026-10-07</span>
+    </div>
+</summary>
+
+Too many changes to list here, but the EMF setup has been reduced by a lot. Check the updated guide!
+
+[Full SkyBlock Patch Notes](https://hypixel.net/threads/hypixel-skyblock-0-27-3-magic-find-rework-accessory-bag-revamp-and-more.6169127/)
+</details>
+
+
+
+<details>
+<summary>
+    <div>
         <em>New Scatha RNG calculation info</em><br>
         <span class="changelog-subtitle">2026-10-22</span>
     </div>

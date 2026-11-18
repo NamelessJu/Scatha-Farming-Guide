@@ -1,10 +1,10 @@
 window.addEventListener('DOMContentLoaded', () => {
 
     const weirdHypixelRNGCalculationCoefficient = 0.6;
-    const petDropChanceAny = 0.004 * weirdHypixelRNGCalculationCoefficient;
-    const petDropChanceRare = 0.0024 * weirdHypixelRNGCalculationCoefficient;
-    const petDropChanceEpic = 0.0012 * weirdHypixelRNGCalculationCoefficient;
-    const petDropChanceLegendary = 0.0004 * weirdHypixelRNGCalculationCoefficient;
+    const petDropChanceAny = 0.01 * weirdHypixelRNGCalculationCoefficient;
+    const petDropChanceRare = 0.006 * weirdHypixelRNGCalculationCoefficient;
+    const petDropChanceEpic = 0.003 * weirdHypixelRNGCalculationCoefficient;
+    const petDropChanceLegendary = 0.001 * weirdHypixelRNGCalculationCoefficient;
 
 
     const resultContainer = document.getElementById('calc-dropchance-result');
