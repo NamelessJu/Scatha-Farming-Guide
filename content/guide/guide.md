@@ -51,6 +51,7 @@ With *(one of)*:
 
 - [Pulse Ring](https://hypixelskyblock.minecraft.wiki/w/Pulse_Ring) *(<span class="color-aqua">+<span class="stats-progression">0.5-</span>2 ✯</span>)*
 - [Anguish Artifact](https://hypixelskyblock.minecraft.wiki/w/Anguish_Artifact) *(<span class="color-aqua">+1.5 ✯</span>)*
+- Mythic [Beastslayer's Codex](https://hypixelskyblock.minecraft.wiki/w/Beastslayer%27s_Codex) *(<span class="color-aqua">+1 ✯</span>)*
 - [Jacobus Register](https://hypixelskyblock.minecraft.wiki/w/Jacobus_Register) *(<span class="color-light-purple">+1 ♣</span>)*
 - [Future Calories Talisman](https://hypixelskyblock.minecraft.wiki/w/Future_Calories_Talisman) *(<span class="color-light-purple">+0.5 ❃ Tracking</span>)*
 
