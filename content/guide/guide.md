@@ -115,7 +115,7 @@ For increased passive money:
   - [Hot Chocolate Mixin](https://hypixelskyblock.minecraft.wiki/w/Hot_Chocolate_Mixin) *(<span class="color-light-purple">+15 ♣</span>)*
   - [Celestial Mason Jar](https://hypixelskyblock.minecraft.wiki/w/Celestial_Mason_Jar) *(<span class="color-aqua">+1 ✯</span>, <span class="color-light-purple">+5 ❃ Tracking</span>)*
 - [Booster Cookie](https://hypixelskyblock.minecraft.wiki/w/Booster_Cookie) *(<span class="color-aqua">+10 ✯</span>)*
-- [Beacon](https://hypixelskyblock.minecraft.wiki/w/Beacon) with [Scorched Power Crystal](https://hypixelskyblock.minecraft.wiki/w/Scorched_Power_Crystal) *(<span class="color-light-purple">+<span class="stats-progression">1-</span>6 ❃ Tracking</span>)*
+- [Beacon](https://hypixelskyblock.minecraft.wiki/w/Beacon) with [Scorched Power Crystal](https://hypixelskyblock.minecraft.wiki/w/Scorched_Power_Crystal) *(<span class="color-light-purple">+<span class="stats-progression">0.5-</span>3 ❃ Tracking</span>)*
   *The Magic Find buff would be less useful here on average*
 - [Century Cakes](https://hypixelskyblock.minecraft.wiki/w/Century_Cakes):
   - Century Cake of the Next Dungeon Floor *(<span class="color-aqua">+1 ✯</span>)*
