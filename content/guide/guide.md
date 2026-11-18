@@ -99,7 +99,7 @@ For increased passive money:
 - [Consumables](https://hypixelskyblock.minecraft.wiki/w/Consumables#Permanent_Consumables):
   - [Divine Gift](https://hypixelskyblock.minecraft.wiki/w/Divine_Gift) *(<span class="color-aqua">+<span class="stats-progression">1-</span>5 ✯</span>)*
   - [Brain Food](https://hypixelskyblock.minecraft.wiki/w/Brain_Food) *(<span class="color-light-purple">+<span class="stats-progression">1-</span>5 ❃ Tracking</span>)*
-  - [Diana's Bookshelf](https://hypixelskyblock.minecraft.wiki/w/Diana%27s_Bookshelf) *(<span class="color-aqua">+1 ✯</span> & <span class="color-light-purple">+1 ❃ Tracking</span>)*
+  - [Diana's Bookshelf](https://hypixelskyblock.minecraft.wiki/w/Diana%27s_Bookshelf) *(<span class="color-aqua">+1 ✯</span>, <span class="color-light-purple">+1 ❃ Tracking</span>)*
   - [Necron's Ladder](https://hypixelskyblock.minecraft.wiki/w/Necron%27s_Ladder) *(<span class="color-aqua">+1 ✯</span>)*
 - [Year of the Witch](https://hypixelskyblock.minecraft.wiki/w/Year_of_the_Witch):
   - [Gemstone Goulash](https://hypixelskyblock.minecraft.wiki/w/Gemstone_Goulash) *(<span class="color-aqua">+1 ✯</span> on ⸕ Subterranean mobs)*
