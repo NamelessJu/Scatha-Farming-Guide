@@ -6,10 +6,12 @@ Term we use for both stats added together: "<span class="color-blue">Effective M
 
 ### <img class="icon" src="assets/guide/icons/divans_helmet.webp"/> Armors:
 
-- [Armor of Divan](https://hypixelskyblock.minecraft.wiki/w/Armor_of_Divan) *(<span class="color-red">+10 ♨ Heat Resistance</span> per piece = <span class="color-red">+40 ♨ Heat Resistance</span> for whole set)*
+- New tunnel: [Armor of Divan](https://hypixelskyblock.minecraft.wiki/w/Armor_of_Divan) *(<span class="color-red">+10 ♨ Heat Resistance</span> per piece = <span class="color-red">+40 ♨ Heat Resistance</span> for whole set)*
   *This is generally the best mining armor, you may use any other mining armor as an alternative*
-- [Glossy Mineral Armor](https://hypixelskyblock.minecraft.wiki/w/Glossy_Mineral_Armor) *(<span class="color-yellow">+150 ▚ Mining Spread</span> per piece = <span class="color-yellow">+600 ▚ Mining Spread</span> for whole set)*
+- Tunnel ceiling: [Glossy Mineral Armor](https://hypixelskyblock.minecraft.wiki/w/Glossy_Mineral_Armor) *(<span class="color-yellow">+150 ▚ Mining Spread</span> per piece = <span class="color-yellow">+600 ▚ Mining Spread</span> for whole set)*
   *Alternative: [Mineral Armor](https://hypixelskyblock.minecraft.wiki/w/Mineral_Armor) (<span class="color-yellow">+100 ▚ Mining Spread</span> per piece = <span class="color-yellow">+400 ▚ Mining Spread</span> for whole set)*
+
+*See the [strategy section](#guide/mining) for more info on why you should switch between these 2 armors!*
 
 ### <img class="icon-pixelart" src="assets/guide/icons/sapphire_cloak.png"> Equipment:︎︎
 
@@ -41,11 +43,11 @@ With *(one of)*:
 
 #### Mining pets:
 
-- Legendary [Bal Pet](https://hypixelskyblock.minecraft.wiki/w/Bal_Pet) *(<span class="color-red">+<span class="stats-progression">1.5-</span>150 ♨ Heat Resistance</span>)*  
+- New tunnel: Legendary [Bal Pet](https://hypixelskyblock.minecraft.wiki/w/Bal_Pet) *(<span class="color-red">+<span class="stats-progression">1.5-</span>150 ♨ Heat Resistance</span>)*  
   *Can additionally be used for reducing heat by 4 per mob killed*
-- Legendary or Mythic [Armadillo](https://hypixelskyblock.minecraft.wiki/w/Armadillo_Pet) *(<span class="color-yellow">+<span class="stats-progression">3-</span>300 ▚ Mining Spread</span>)*
+- Tunnel ceiling: Legendary or Mythic [Armadillo](https://hypixelskyblock.minecraft.wiki/w/Armadillo_Pet) *(<span class="color-yellow">+<span class="stats-progression">3-</span>300 ▚ Mining Spread</span>)*
 
-*See the [strategy section](#guide/mining) for when to use which pet!*
+*See the [strategy section](#guide/mining) for more info on why you should switch between these 2 pets!*
 
 ### <img class="icon" src="assets/guide/icons/pulse_ring.webp"> Accessories:
 
