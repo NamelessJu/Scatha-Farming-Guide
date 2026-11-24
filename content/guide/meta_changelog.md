@@ -2,7 +2,7 @@
 <summary>
     <div>
         Hypixel SkyBlock 0.27.3 <em>(Magic Find Rework)</em><br>
-        <span class="changelog-subtitle">2026-10-07</span>
+        <span class="changelog-subtitle">2026-11-18</span>
     </div>
 </summary>
 
